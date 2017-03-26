@@ -46,14 +46,17 @@ var preload = function(){//Giống hàm OnAttach trong android ->Load vào trong
 // initialize the game
 var create = function(){//Giống Oncreate
   Nakama.game.physics.startSystem(Phaser.Physics.ARCADE);
+
   Nakama.keyboard = Nakama.game.input.keyboard;
+
 
   map = Nakama.game.add.sprite(0,0,'background');
   Nakama.foundGroup = Nakama.game.add.physicsGroup();
   Nakama.playerGroup = Nakama.game.add.physicsGroup();
-  bot = Nakama.game.add.sprite(200, 200, 'Dino');
+  bot = Nakama.game.add.sprite(1000, 1000, 'Dino');
     //  Set the world (global) gravity
   Nakama.game.physics.arcade.gravity.y = 100;
+
 
   Nakama.player = [];
   Nakama.player.push(
@@ -70,19 +73,21 @@ var create = function(){//Giống Oncreate
   );
   Nakama.found = [];
   Nakama.found.push(
-    new Foundation('Foundation2.png')
+    new Foundation(0,1200,'Foundation2.png')
   );
   //Gravity:
   Nakama.physics.enable(Nakama.playerGroup, Phaser.Physics.ARCADE);
 }
-
+function dkm(){}
 // update game state each frame
 var update = function(){//Vòng lặp game
-    Nakama.player.forEach(function(dino){
-      dino.update();
+  Nakama.player.forEach(function(dino){
+    dino.update();
     }
   );
+  Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.foundGroup, dkm);
 }
 
 // before camera render (mostly for debug)
-var render = function(){}
+var render = function(){
+}

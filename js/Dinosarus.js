@@ -10,7 +10,10 @@ class Dinosarus{
       //this about gravity
       this.sprite.body.collideWorldBounds = true;
       this.sprite.body.bounce.y = 0.8;
-    
+      //out bound kill
+      this.sprite.body.checkWarBounds = true;
+      this.sprite.body.outOfBoundsKill = true;
+
   }
   update(){
 
@@ -42,4 +45,4 @@ class Dinosarus{
     this.sprite.animations.stop('run');
   }
 }
-Dinosarus.SPEED = 200;
+Dinosarus.SPEED = 500;
