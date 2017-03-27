@@ -7,7 +7,7 @@ class Foundation{
     // this.configs = configs;
     this.sprite.body.allowGravity = false;
     this.sprite.body.immovable = true;
-    this.sprite.body.setSize(x,y,0,-200);
+    this.sprite.body.setSize(976.199,431.242-14,0,14);
   }
   update(){
   }

@@ -13,19 +13,19 @@ class Dinosarus{
       //out bound kill
       this.sprite.body.checkWarBounds = true;
       this.sprite.body.outOfBoundsKill = true;
-
+      this.sprite.body.bounce = new Phaser.Point(0,0);
   }
   update(){
 
     //Di chuyển lên xuống
-    if(Nakama.keyboard.isDown(this.configs.up)){
+    if(Nakama.keyboard.isDown(this.configs.up) && this.configs.cooldown == true){
       console.log("UP button pressed");
       this.sprite.body.velocity.y = -Dinosarus.SPEED;
     }else{
       // this.sprite.body.velocity.y = 0;
       this.sprite.body.gravity.y = 200;
+      this.configs.cooldown = false;
     }
-
     //Di chuyển trái phải
     if(Nakama.keyboard.isDown(this.configs.left)){
       this.sprite.body.velocity.x = -Dinosarus.SPEED;

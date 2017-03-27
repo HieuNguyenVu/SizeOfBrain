@@ -56,7 +56,7 @@ var create = function(){//Giống Oncreate
   bot = Nakama.game.add.sprite(1000, 1000, 'Dino');
     //  Set the world (global) gravity
   Nakama.game.physics.arcade.gravity.y = 100;
-
+  this.cooldown = false;
 
   Nakama.player = [];
   Nakama.player.push(
@@ -67,7 +67,7 @@ var create = function(){//Giống Oncreate
         down  : Phaser.Keyboard.DOWN,
         left  : Phaser.Keyboard.LEFT,
         right : Phaser.Keyboard.RIGHT,
-        cooldown: 0.1
+        cooldown: this.cooldown
       }
     )
   );
@@ -75,10 +75,10 @@ var create = function(){//Giống Oncreate
   Nakama.found.push(
     new Foundation(0,1200,'Foundation2.png')
   );
-  //Gravity:
-  Nakama.physics.enable(Nakama.playerGroup, Phaser.Physics.ARCADE);
 }
-function dkm(){}
+function dkm(){
+  this.cooldown = true;
+}
 // update game state each frame
 var update = function(){//Vòng lặp game
   Nakama.player.forEach(function(dino){
