@@ -1,4 +1,4 @@
-class FoundationTrap2{
+class FoundationTrap4{
   constructor(x, y, sprite){
     this.sprite = Nakama.trapGroup.create(x, y, 'Foundation', sprite);
     Nakama.game.physics.arcade.enable(this.sprite);

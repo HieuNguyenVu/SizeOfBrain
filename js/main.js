@@ -81,7 +81,8 @@ var create = function(){//Giống Oncreate
   Nakama.trap = [];
   Nakama.trap.push(
     new FoundationTrap2(950, 950,'FoundationTrap2.png'),
-    new FoundationTrap2(1450, 950, 'FoundationTrap3.png')
+    new FoundationTrap3(1450, 950, 'FoundationTrap3.png'),
+    new FoundationTrap4(450, 950, 'FoundationTrap4.png')
   )
 }
 function dkm(){
@@ -105,7 +106,7 @@ var update = function(){//Vòng lặp game
 }
 
 var gameOver = function(){
-  console.log("Em nó đã dính bẫy")
+  console.log("Em nó đã dính bẫy :'(");
 }
 // before camera render (mostly for debug)
 var render = function(){

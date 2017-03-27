@@ -46,5 +46,6 @@ class Dinosarus{
     this.sprite.animations.stop('run');
   }
 }
+
 Dinosarus.SPEED = 500;
 Dinosarus.JUMP = 1500;
