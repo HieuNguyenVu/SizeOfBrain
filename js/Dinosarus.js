@@ -16,16 +16,17 @@ class Dinosarus{
       this.sprite.body.bounce = new Phaser.Point(0,0);
   }
   update(){
-
+    var hitFound=  Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.foundGroup);
     //Di chuyển lên xuống
-    if(Nakama.keyboard.isDown(this.configs.up) && this.configs.cooldown == true){
-      console.log("UP button pressed");
-      this.sprite.body.velocity.y = -Dinosarus.SPEED;
+    if(Nakama.keyboard.isDown(this.configs.up)&&this.sprite.body.touching.down&& hitFound){
+    //  console.log("UP button pressed");
+      this.sprite.body.velocity.y = -Dinosarus.JUMP;
+
     }else{
-      // this.sprite.body.velocity.y = 0;
-      this.sprite.body.gravity.y = 200;
-      this.configs.cooldown = false;
+      // this.sprite.body.velocity.y = Dinosarus.SPEED;
+      this.sprite.body.gravity.y = 900;
     }
+
     //Di chuyển trái phải
     if(Nakama.keyboard.isDown(this.configs.left)){
       this.sprite.body.velocity.x = -Dinosarus.SPEED;
@@ -46,3 +47,4 @@ class Dinosarus{
   }
 }
 Dinosarus.SPEED = 500;
+Dinosarus.JUMP = 1500;

@@ -53,17 +53,17 @@ var create = function(){//Giống Oncreate
   map = Nakama.game.add.sprite(0,0,'background');
   Nakama.foundGroup = Nakama.game.add.physicsGroup();
   Nakama.playerGroup = Nakama.game.add.physicsGroup();
-  bot = Nakama.game.add.sprite(1000, 1000, 'Dino');
+  Nakama.trapGroup = Nakama.game.add.physicsGroup();
+  bot = Nakama.game.add.sprite(0, 1000, 'Dino');
     //  Set the world (global) gravity
-  Nakama.game.physics.arcade.gravity.y = 100;
-  this.cooldown = false;
+  Nakama.game.physics.arcade.gravity.y = 3000;
 
   Nakama.player = [];
   Nakama.player.push(
     new Dinosarus(
       bot,
       {
-        up    : Phaser.Keyboard.SPACEBAR,
+        up    : Phaser.Keyboard.UP,
         down  : Phaser.Keyboard.DOWN,
         left  : Phaser.Keyboard.LEFT,
         right : Phaser.Keyboard.RIGHT,
@@ -71,13 +71,21 @@ var create = function(){//Giống Oncreate
       }
     )
   );
+
   Nakama.found = [];
   Nakama.found.push(
-    new Foundation(0,1200,'Foundation2.png')
+    new Foundation(0,1200,'Foundation2.png'),
+    new Foundation(900, 1200, 'Foundation2.png')
   );
+
+  Nakama.trap = [];
+  Nakama.trap.push(
+    new FoundationTrap2(950, 950,'FoundationTrap2.png'),
+    new FoundationTrap2(1450, 950, 'FoundationTrap3.png')
+  )
 }
 function dkm(){
-  this.cooldown = true;
+  //this.cooldown = true;
 }
 // update game state each frame
 var update = function(){//Vòng lặp game
@@ -85,9 +93,20 @@ var update = function(){//Vòng lặp game
     dino.update();
     }
   );
+
   Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.foundGroup, dkm);
+  Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.trapGroup, dkm);
+
+  Nakama.game.physics.arcade.overlap(
+    Nakama.playerGroup,
+    Nakama.trapGroup,
+    gameOver
+  );
 }
 
+var gameOver = function(){
+  console.log("Em nó đã dính bẫy")
+}
 // before camera render (mostly for debug)
 var render = function(){
 }
