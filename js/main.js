@@ -75,16 +75,16 @@ var create = function(){//Giống Oncreate
   Nakama.found = [];
   Nakama.found.push(
     new Foundation(0,1200,'Foundation2.png'),
-    new Foundation(900, 1200, 'Foundation2.png')
+    new Foundation(950, 1200, 'Foundation1.png')
   );
 
   Nakama.trap = [];
   Nakama.trap.push(
-    new FoundationTrap1(200, 950, 'Foundation1.png'),
-    new FoundationTrap2(400, 1200,'FoundationTrap2.png'),
-    new FoundationTrap3(600, 950, 'FoundationTrap3.png'),
-    new FoundationTrap4(800, 950, 'FoundationTrap4.png'),
-    new FoundationTrap5(1100, 1300, 1300, 950, 'Foundation1.png')
+  new FoundationTrap1(200, 950, 'Foundation1.png'),
+  new FoundationTrap2(400, 1200,'FoundationTrap2.png'),
+  new FoundationTrap3(600, 950, 'FoundationTrap3.png'),
+  new FoundationTrap4(800, 950, 'FoundationTrap4.png'),
+  new FoundationTrap5(1100, 1300, 1300, 1200, 'Foundation1.png')
   )
 }
 function dkm(){
@@ -92,6 +92,11 @@ function dkm(){
 }
 // update game state each frame
 var update = function(){//Vòng lặp game
+  Nakama.found.forEach(function(found){
+    found.update();
+  }
+
+);
   Nakama.player.forEach(function(dino){
     dino.update();
     }

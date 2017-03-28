@@ -8,6 +8,7 @@ class FoundationTrap4{
     this.sprite.body.setSize(166.027,336.013-14,0,14);
   }
   update(){
-
+    this.sprite.body.velocity.x=-FoundationTrap4.SPEED;
   }
 }
+FoundationTrap4.SPEED=100;

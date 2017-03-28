@@ -7,6 +7,8 @@ class Foundation{
     this.sprite.body.setSize(976.199,431.242-14,0,14);
   }
   update(){
+    this.sprite.body.velocity.x=-Foundation.SPEED;
   }
 }
 // Foundation.SPRITE = 'Foundation1.png';
+Foundation.SPEED=100;

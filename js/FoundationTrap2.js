@@ -8,6 +8,7 @@ class FoundationTrap2{
     this.sprite.body.setSize(166.027,336.013-14,0,14);
   }
   update(){
+    this.sprite.body.velocity.x=-FoundationTrap2.SPEED;
     this.playerSprite=Nakama.playerGroup.getFirstAlive();
     if((this.sprite.position.x - this.playerSprite.position.x)<100){
         this.sprite.body.velocity.y = -FoundationTrap2.SPEED;
@@ -19,3 +20,4 @@ class FoundationTrap2{
 }
 
 FoundationTrap2.SPEED = 500;
+FoundationTrap2.XSPEED=100;
