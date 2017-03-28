@@ -7,7 +7,6 @@ class Foundation{
     this.sprite.body.setSize(976.199,431.242-14,0,14);
   }
   update(){
-    
   }
 }
 // Foundation.SPRITE = 'Foundation1.png';

@@ -1,6 +1,6 @@
 class FoundationTrap1{
   constructor(x, y,sprite){
-    this.sprite = Nakama.foundGroup.create(x, y,'Foundation',sprite );
+    this.sprite = Nakama.trapGroup.create(x, y,'Foundation',sprite );
     // Nakama.game.add(this.sprite);
     Nakama.game.physics.arcade.enable(this.sprite);
     //this.sprite.body.collideWorldBounds = true;

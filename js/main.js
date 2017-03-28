@@ -80,9 +80,11 @@ var create = function(){//Giống Oncreate
 
   Nakama.trap = [];
   Nakama.trap.push(
-    new FoundationTrap2(950, 950,'FoundationTrap2.png'),
-    new FoundationTrap3(1450, 950, 'FoundationTrap3.png'),
-    new FoundationTrap4(450, 950, 'FoundationTrap4.png')
+    new FoundationTrap1(200, 950, 'Foundation1.png'),
+    new FoundationTrap2(400, 1200,'FoundationTrap2.png'),
+    new FoundationTrap3(600, 950, 'FoundationTrap3.png'),
+    new FoundationTrap4(800, 950, 'FoundationTrap4.png'),
+    new FoundationTrap5(1100, 1300, 1300, 950, 'Foundation1.png')
   )
 }
 function dkm(){
@@ -92,6 +94,11 @@ function dkm(){
 var update = function(){//Vòng lặp game
   Nakama.player.forEach(function(dino){
     dino.update();
+    }
+  );
+
+  Nakama.trap.forEach(function(trap){
+    trap.update();
     }
   );
 
@@ -106,7 +113,7 @@ var update = function(){//Vòng lặp game
 }
 
 var gameOver = function(){
-  console.log("Em nó đã dính bẫy :'(");
+  console.log("Em nó đã dính bẫy :'(")
 }
 // before camera render (mostly for debug)
 var render = function(){
