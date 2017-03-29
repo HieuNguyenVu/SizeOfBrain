@@ -10,5 +10,8 @@ class FoundationTrap4{
   update(){
     this.sprite.body.velocity.x=-FoundationTrap4.SPEED;
   }
+  move(){
+    
+  }
 }
 FoundationTrap4.SPEED=100;

@@ -71,21 +71,18 @@ var create = function(){//Giống Oncreate
       }
     )
   );
-
+  Nakama.trap = [];
   Nakama.found = [];
   Nakama.found.push(
     new Foundation(0,1200,'Foundation2.png'),
-    new Foundation(950, 1200, 'Foundation1.png')
+    new FoundationTrap2(900,1200,'Foundation2.png'),
+    new FoundationTrapWithPike(1800, 1200)
+    // new Foundation(1800, 1200, 'Foundation2.png'),
+    // new Foundation(2700, 1200, 'Foundation2.png'),
+    // new Foundation(3600, 1200, 'Foundation2.png')
+
   );
 
-  Nakama.trap = [];
-  Nakama.trap.push(
-  new FoundationTrap1(200, 950, 'Foundation1.png'),
-  new FoundationTrap2(400, 1200,'FoundationTrap2.png'),
-  new FoundationTrap3(600, 950, 'FoundationTrap3.png'),
-  new FoundationTrap4(800, 950, 'FoundationTrap4.png'),
-  new FoundationTrap5(1100, 1300, 1300, 1200, 'Foundation1.png')
-  )
 }
 function dkm(){
   //this.cooldown = true;
@@ -101,12 +98,14 @@ var update = function(){//Vòng lặp game
     dino.update();
     }
   );
-
-  Nakama.trap.forEach(function(trap){
-    trap.update();
+  Nakama.found.forEach(function(dino){
+    dino.update();
     }
   );
-
+  // Nakama.trap.forEach(function(trap){
+  //   trap.update();
+  //   }
+  // );
   Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.foundGroup, dkm);
   Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.trapGroup, dkm);
 
