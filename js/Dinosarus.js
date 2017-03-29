@@ -62,4 +62,4 @@ class Dinosarus{
 }
 
 Dinosarus.SPEED = 500;
-Dinosarus.JUMP = 1500;
+Dinosarus.JUMP = 1300;

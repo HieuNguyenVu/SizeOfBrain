@@ -75,8 +75,11 @@ var create = function(){//Giống Oncreate
   Nakama.found = [];
   Nakama.found.push(
     new Foundation(0,1200,'Foundation2.png'),
-    new FoundationTrap2(900,1200,'Foundation2.png'),
-    new FoundationTrapWithPike(1800, 1200)
+    new FoundationTrap1(975,1200,'Foundation1.png'),
+    new Foundation(1132,1200,'Foundation2.png'),
+    new FoundationTrap5(2107,1400,'Foundation1.png')
+
+  //  new FoundationTrapWithPike(1800, 1200)
     // new Foundation(1800, 1200, 'Foundation2.png'),
     // new Foundation(2700, 1200, 'Foundation2.png'),
     // new Foundation(3600, 1200, 'Foundation2.png')
