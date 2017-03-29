@@ -15,5 +15,5 @@ class Foundation{
     this.sprite.body.velocity.x = 0;
   }
 }
-// Foundation.SPRITE = 'Foundation1.png';
+//  Foundation.SPRITE = 'Foundation1.png';
 Foundation.SPEED=100;

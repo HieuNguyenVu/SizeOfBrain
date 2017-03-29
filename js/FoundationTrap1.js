@@ -8,7 +8,7 @@ class FoundationTrap1 extends Foundation{
   //   this.sprite.body.allowGravity = false;
   //   this.sprite.body.immovable = true;
   // //  this.sprite.body.setSize(135.199,431.242-14,0,14);
-  //
+  
   // }
   update(){
 

@@ -15,12 +15,11 @@ class FoundationTrap5{
   }
   update(){
 
-    
+
     this.playerSprite=Nakama.playerGroup.getFirstAlive();
     if((this.sprite1.position.x-10-this.playerSprite.position.x)<0 &&(this.sprite1.position.y>1200)){
       this.sprite1.body.velocity.y = -FoundationTrap5.SPEED;
       this.sprite2.body.velocity.y = FoundationTrap5.SPEED;
-
     }
     if(this.sprite1.position.y<1215){
       this.sprite1.body.velocity.y=0;

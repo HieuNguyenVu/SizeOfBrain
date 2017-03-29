@@ -87,7 +87,7 @@ var create = function(){//Giống Oncreate
   );
 
 }
-function dkm(){
+function  dkm(){
   //this.cooldown = true;
 }
 // update game state each frame
