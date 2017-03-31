@@ -5,12 +5,12 @@ class Pike{
     }else {
       this.sprite = Nakama.trapGroup.create(x+1500, y-1000,'Foundation','PikeBlack.png');
     }
-    this.direction = new Phaser.Point(x,y);
-    this.sprite.angle = Math.atan2(this.direction.x, this.direction.y) * (180/Math.PI);
+    this.target = new Phaser.Point(x,y);
+    this.sprite.angle = Math.atan2(x,-y) * (180/Math.PI);
     this.sprite.anchor = new Phaser.Point(0.5,0.5);
     this.sprite.checkWorldBounds = true;
     this.sprite.outOfBoundsKill = true;
-    this.sprite.body.velocity = this.direction.setMagnitude(Pike.PIKE_SPEED);
+    this.sprite.body.velocity = this.target.setMagnitude(Pike.PIKE_SPEED);
 
     Nakama.trap.push(this);
     this.sprite.onKilled = this.onKilled;
@@ -19,7 +19,7 @@ class Pike{
     this.sprite.body.immovable = true;
   }
   update(){
-    this.move();
+    // this.move();
   }
   move(){
   // 1. Get a target if doesn't have target
@@ -29,7 +29,7 @@ class Pike{
   // 2. If no target is available keep on going straight
   // if(!this.target) return;
   // 3. Get direction toward target
-  var direction = Phaser.Point.subtract(this.target.position, this.sprite.position);
+  var direction = Phaser.Point.subtract(this.target, this.sprite.position);
   // 4. Turn slowly if the angle is too large
   var currentAngle = Nakama.game.math.radToDeg(
     Nakama.game.math.angleBetween(
@@ -52,7 +52,7 @@ class Pike{
   if(deltaAngle > 180) deltaAngle -= 360;
   if(deltaAngle < -180) deltaAngle += 360;
   // Ensure deltaAngle does not exceed max turn rate
-  var maxDelta = BulletType2Controller.TURN_RATE * Nakama.game.time.physicsElapsed;
+  var maxDelta = Pike.TURN_RATE * Nakama.game.time.physicsElapsed;
   if(deltaAngle > maxDelta) deltaAngle = maxDelta;
   if(deltaAngle < -maxDelta) deltaAngle = -maxDelta;
   // Apply new direction based on new angle
@@ -67,3 +67,4 @@ class Pike{
   }
 }
 Pike.PIKE_SPEED = 1000;
+Pike.TURN_RATE = 200;

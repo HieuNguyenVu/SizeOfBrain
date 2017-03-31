@@ -1,6 +1,6 @@
 class FoundationTrapWithPike{
   constructor(x, y){
-    // this.spritePike = new Pike(x,y,1);
+    this.spritePike = new Pike(x,y-200,1);
     // Nakama.trap.push(this.spritePike);
     // Nakama.trapGroup.add(this.spritePike);
     this.spriteFound = Nakama.foundGroup.create(x,y,'Foundation','Foundation2.png');
@@ -12,9 +12,9 @@ class FoundationTrapWithPike{
     this.spriteFound.body.allowGravity = false;
     this.spriteFound.body.immovable = true;
     this.spriteFound.body.setSize(976.199,431.242-14,0,14);
+    Nakama.game.physics.arcade.collide(this.spritePlayer,this.spriteFound, this.dkm());
   }
   update(){
-    // var hitThisFound =  Nakama.game.physics.arcade.collide(this.spritePlayer,this.spriteFound, this.dkm());
     // console.log(this.spritePlayer.body.position.x);
     // console.log(this.spriteFound.body.position.x);
     // this.move();

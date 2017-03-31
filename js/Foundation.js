@@ -4,7 +4,7 @@ class Foundation{
     Nakama.game.physics.arcade.enable(this.sprite);
     this.sprite.body.allowGravity = false;
     this.sprite.body.immovable = true;
-    //this.sprite.body.setSize(976.199,431.242-14,0,14);
+    this.sprite.body.setSize(976.199,431.242-14,0,14);
   }
   update(){
   }
