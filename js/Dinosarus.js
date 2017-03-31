@@ -5,13 +5,13 @@ class Dinosarus{
       Nakama.game.physics.arcade.enable(this.sprite);
       this.configs = configs;
       this.sprite.anchor = new Phaser.Point(0.5,0.5);
-      this.sprite.animations.add('run');
       //this about gravity
       this.sprite.body.collideWorldBounds = false;
       this.sprite.body.bounce.y = 0.8;
       //out bound kill
       this.sprite.body.checkWarBounds = true;
       this.sprite.body.outOfBoundsKill = true;
+      this.sprite.animations.add('run');
       this.sprite.body.bounce = new Phaser.Point(0,0);
   }
   update(){
