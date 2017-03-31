@@ -40,6 +40,7 @@ var preload = function(){//Giống hàm OnAttach trong android ->Load vào trong
 
   Nakama.game.load.atlasJSONHash('Dino', 'Assets/assets.png', 'Assets/Dino.json');
   Nakama.game.load.atlasJSONHash('Foundation','Assets/assets.png', 'Assets/Foundation.json');
+  Nakama.game.load.atlasJSONHash('Foundation2','Assets/assets2.png', 'Assets/Foundation2.json');
   Nakama.game.load.image('background', 'Assets/background.png');
 
 }
@@ -77,10 +78,9 @@ var create = function(){//Giống Oncreate
   Nakama.found.push(
     new Foundation(0,1200,'Foundation2.png'),
     new Foundation(2421,1200,'Foundation2.png'),
-    new FoundationTrap1(975,1200,'Foundation1.png'),
+    // new FoundationTrap2(900,1200,'Foundation2.png'),
     new Foundation(1132,1200,'Foundation2.png'),
     new FoundationTrap5(2107,1400,'Foundation1.png'),
-    new FoundationTrap6(3396,1200)
 
   //  new FoundationTrapWithPike(1800, 1200)
     // new Foundation(1800, 1200, 'Foundation2.png'),
