@@ -7,12 +7,12 @@ var loadState = {
     Nakama.game.load.image('button' , 'Assets/playButton.png');
     Nakama.game.load.image('gameOver' , 'Assets/gameOver.png');
     Nakama.game.load.image('gameTiles' , 'Assets/gameTiles.png');
-
+    Nakama.game.load.image('boardButton' , 'Assets/leaderBoard.png');
     console.log("create");
     Nakama.player = [];
     Nakama.trap = [];
     Nakama.found = [];
-    
+
 
   },
   create: function() {
