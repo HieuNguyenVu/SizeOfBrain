@@ -14,17 +14,17 @@
       this.spriteFoundBox.body.allowGravity = false;
       this.spriteFoundBox.body.immovable = true;
      //foundbox2
-      this.spriteFoundBox2 = Nakama.foundGroup.create(x-150,1000,'Foundation2','Box3.png');
+      this.spriteFoundBox2 = Nakama.foundGroup.create(x,1000,'Foundation2','Box3.png');
       Nakama.game.physics.arcade.enable(this.spriteFoundBox2);
       this.spriteFoundBox2.body.allowGravity = false;
       this.spriteFoundBox2.body.immovable = true;
       //foundbox3
-      this.spriteFoundBox3 = Nakama.foundGroup.create(x+673,750,'Foundation2','Box3.png');
+      this.spriteFoundBox3 = Nakama.foundGroup.create(x+670,750,'Foundation2','Box3.png');
       Nakama.game.physics.arcade.enable(this.spriteFoundBox3);
       this.spriteFoundBox3.body.allowGravity = false;
       this.spriteFoundBox3.body.immovable = true;
       //foundbox4
-      this.spriteFoundBox4 = Nakama.foundGroup.create(x+900,1000,'Foundation2','Box3.png');
+      this.spriteFoundBox4 = Nakama.foundGroup.create(x+700,1000,'Foundation2','Box3.png');
       Nakama.game.physics.arcade.enable(this.spriteFoundBox4);
       this.spriteFoundBox4.body.allowGravity = false;
       this.spriteFoundBox4.body.immovable = true;

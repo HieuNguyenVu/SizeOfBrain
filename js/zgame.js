@@ -34,7 +34,7 @@ var createArray = function(soluong){
   var arr = [];
   arr.push(0);
   for(let i=0; i<soluong; i++){
-    arr.push(Math.floor(Math.random() * 18) + 1);
+    arr.push(Math.floor(Math.random() * 23) + 1);
   }
   arr.push(69);
   return arr;
@@ -119,6 +119,30 @@ var createMap = function(arr){
         Nakama.found.push(new FoundationTrap18(x,1200));
         x += 1023;
         break;
+      case 19:
+        Nakama.found.push(new FoundationTrap19(x,1200));
+        x += 1023;
+        break;
+      case 20:
+        Nakama.found.push(new FoundationTrap20(x,1200));
+        x += 1023;
+        break;
+        case 21:
+      Nakama.found.push(new FoundationTrap21(x,1200));
+        x += 1023;
+        break;
+      case 22:
+        Nakama.found.push(new FoundationTrap22(x,1200));
+        x += 1023;
+        break;
+      case 23:
+        Nakama.found.push(new FoundationTrap23(x,1200));
+        x += 1023;
+        break;
+      case 24:
+            Nakama.found.push(new FoundationTrap24(x,1200));
+            x += 1023;
+            break;
       case 69:
         Nakama.found.push(new CheckPoint(x,1200));
         x += 1023;
