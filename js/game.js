@@ -22,3 +22,7 @@ var gameOver = function(){
 function  dkm(){
   //this.cooldown = true;
 }
+
+var gameOver = function(){
+  Nakama.playerGroup.getFirstAlive().kill();
+}

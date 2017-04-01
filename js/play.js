@@ -6,6 +6,9 @@ var playState = {
     map = Nakama.game.add.sprite(0,0,'background');
     Nakama.foundGroup = Nakama.game.add.physicsGroup();
     Nakama.playerGroup = Nakama.game.add.physicsGroup();
+    Nakama.invifoundGroup = Nakama.game.add.physicsGroup();
+    Nakama.invifoundGroup2 = Nakama.game.add.physicsGroup();
+    Nakama.trap11 = Nakama.game.add.physicsGroup();
     Nakama.trapGroup = Nakama.game.add.physicsGroup();
     bot = Nakama.game.add.sprite(0, 1000, 'Dino');
     Nakama.count = 0;
@@ -24,17 +27,21 @@ var playState = {
       )
     );
     Nakama.found.push(
-      new Foundation(0,1200,'Foundation2.png'),
-      new Foundation(2500,1200,'Foundation2.png'),
-      // new FoundationTrap2(900,1200,'Foundation2.png'),
-      new Foundation(1300,1200,'Foundation2.png')
-      // new FoundationTrap5(2107,1400,'Foundation1.png')
-
-    //  new FoundationTrapWithPike(1800, 1200)
-      // new Foundation(1800, 1200, 'Foundation2.png'),
-      // new Foundation(2700, 1200, 'Foundation2.png'),
-      // new Foundation(3600, 1200, 'Foundation2.png')
-
+      new Foundation(0,1200),
+      new FoundationTrap5(549,1200),
+      new FoundationTrap6(549+1023,1200),
+      new FoundationTrap4(549+1023*7,1200),
+      new FoundationTrap5(549+1023*2,1200),
+      new FoundationTrap1(549+1023*13,1200),
+      new FoundationTrap2(549+1023*12,1200),
+      new FoundationTrap3(549+1023*3,1200),
+      new FoundationTrap8(549+1023*4,1200),
+      new FoundationTrap9(549+1023*5,1200),
+      new FoundationTrap10(549+1023*6,1200),
+      new FoundationTrap13(549+1023*8,1200),
+      new FoundationTrap11(549+1023*9,1200),
+      new FoundationTrap12(549+1023*10,1200),
+      new FoundationTrap14(549+1023*11,1200)
     );
   },
   // console.log("play2");
@@ -64,7 +71,11 @@ var playState = {
     //   }
     // );
     Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.foundGroup, dkm);
-    Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.trapGroup, dkm);
+    // Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.trapGroup, dkm);
+    Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.invifoundGroup, dkm);
+    Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.invifoundGroup2, dkm);
+    Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.trapGroup, gameOver);
+
     Nakama.game.physics.arcade.overlap(
       Nakama.playerGroup,
       Nakama.trapGroup,
