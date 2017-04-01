@@ -140,6 +140,13 @@
 		"spriteSourceSize": {"x":0,"y":0,"w":290.679 ,"h":265.362},
 		"sourceSize": {"w":190.679 ,"h":165.362}
 	},
+	"SmallBox.png":{
+		"frame": {"x":684.592 , "y":1218.41  ,"w":75 ,"h":75},
+		"rotated": false,
+		"trimmed": false,
+		"spriteSourceSize": {"x":0,"y":0,"w":75 ,"h":75},
+		"sourceSize": {"w":75 ,"h":75}
+	},
 	"LongBox.png":{
 		"frame": {"x":1006.085, "y":1218.41  ,"w":190.679 ,"h":540.793},
 		"rotated": false,

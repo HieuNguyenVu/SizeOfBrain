@@ -18,7 +18,6 @@
     }
     update(){
 
-
       if(Nakama.playerGroup.getFirstAlive() != null){
         this.playerSprite=Nakama.playerGroup.getFirstAlive();
       }else {

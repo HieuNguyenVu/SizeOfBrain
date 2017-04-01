@@ -25,20 +25,24 @@ constructor(x,y){
   this.spritePike2.alpha=0;
   }
   update(){
-   this.playerSprite=Nakama.playerGroup.getFirstAlive();
-   if((this.spriteFound.position.x-100-this.playerSprite.position.x)<0||(kt2==1)){
+    if(Nakama.playerGroup.getFirstAlive() != null){
+      this.playerSprite=Nakama.playerGroup.getFirstAlive();
+    }else {
+      return;
+    }
+    if((this.spriteFound.position.x-100-this.playerSprite.position.x)<0||(kt2==1)){
      this.spritePike.body.velocity.x = -1000;
      this.spritePike.alpha=1;
      kt2=1;
-  }
-  if((this.sprite3.position.x-50-this.playerSprite.position.x)<0){
-    this.sprite3.body.velocity.y=4000;
-    this.sprite3.alpha=1;
-  }
-  var hitTrap= Nakama.game.physics.arcade.overlap(Nakama.playerGroup,Nakama.trapGroup);
-  if(hitTrap){
-    this.spritePike2.alpha=1;
-  }
+    }
+    if((this.sprite3.position.x-50-this.playerSprite.position.x)<0){
+      this.sprite3.body.velocity.y=4000;
+      this.sprite3.alpha=1;
+    }
+    var hitTrap= Nakama.game.physics.arcade.overlap(Nakama.playerGroup,Nakama.trapGroup);
+    if(hitTrap){
+      this.spritePike2.alpha=1;
+    }
 }
   move(){
     this.spriteFound.body.velocity.x = -Dinosarus.SPEED;
