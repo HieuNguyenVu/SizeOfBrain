@@ -16,6 +16,14 @@
 		"spriteSourceSize": {"x":0,"y":0,"w":976.199,"h":431.242},
 		"sourceSize": {"w":976.199,"h":431.242}
 	},
+	"Foundation710.png":
+	{
+		"frame": {"x":4.346 , "y":463.758 ,"w":710,"h":431.242 },
+		"rotated": false,
+		"trimmed": false,
+		"spriteSourceSize": {"x":0,"y":0,"w":976.199,"h":431.242},
+		"sourceSize": {"w":976.199,"h":431.242}
+	},
 	"Foundation49.png":
 	{
 		"frame": {"x":4.346 , "y":463.758 ,"w":49,"h":431.242 },
@@ -35,6 +43,14 @@
 	"Foundation5b.png":
 	{
 		"frame": {"x":4.346 , "y":463.758 ,"w":550,"h":431.242 },
+		"rotated": false,
+		"trimmed": false,
+		"spriteSourceSize": {"x":0,"y":0,"w":976.199,"h":431.242},
+		"sourceSize": {"w":976.199,"h":431.242}
+	},
+	"Foundation315.png":
+	{
+		"frame": {"x":4.346 , "y":463.758 ,"w":315,"h":431.242 },
 		"rotated": false,
 		"trimmed": false,
 		"spriteSourceSize": {"x":0,"y":0,"w":976.199,"h":431.242},

@@ -16,11 +16,11 @@ class FoundationTrap3{
     Nakama.game.physics.arcade.enable(this.spriteFoundTrap2);
     this.spriteFoundTrap2.body.allowGravity = false;
     this.spriteFoundTrap2.body.immovable = true;
-    this.spriteTrap2 = Nakama.trapGroup.create(x+390.6, y+10+260, 'Foundation', 'LongTrap.png');
+    this.spriteTrap2 = Nakama.trapGroup.create(x+393, y+10+260, 'Foundation', 'LongTrap.png');
     Nakama.game.physics.arcade.enable(this.spriteTrap2);
     this.spriteTrap2.body.allowGravity = false;
     this.spriteTrap2.body.immovable = true;
-
+   this.spriteTrap2.body.setSize(10,245,0,0);
     this.spriteTrap3 = Nakama.trapGroup.create(x+450, 0, 'Foundation', 'PikeBlack.png');
     Nakama.game.physics.arcade.enable(this.spriteTrap3);
     this.spriteTrap3.body.allowGravity = false;

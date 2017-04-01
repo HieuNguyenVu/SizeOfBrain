@@ -14,6 +14,7 @@ class Dinosarus{
       this.sprite.body.outOfBoundsKill = true;
       this.sprite.animations.add('run');
       this.sprite.body.bounce = new Phaser.Point(0,0);
+      this.sprite.body.setSize(130-10,63-5,10,5);
     }
   update(){
     var hitFound=  Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.foundGroup);

@@ -8,7 +8,7 @@ constructor(x,y){
   Nakama.game.physics.arcade.enable(this.spriteFound2);
   this.spriteFound2.body.allowGravity = false;
   this.spriteFound2.body.immovable = true;
-  this.spritePike=Nakama.trapGroup.create(x+1000,1120,'Foundation','PikeWhite.png');
+  this.spritePike=Nakama.trapGroup.create(x+1000,1150,'Foundation','PikeWhite.png');
   Nakama.game.physics.arcade.enable(this.spritePike);
   this.spritePike.body.allowGravity = false;
   this.spritePike.body.immovable = true;
@@ -18,7 +18,7 @@ constructor(x,y){
   this.sprite3.body.allowGravity = false;
   this.sprite3.body.immovable = true;
   this.sprite3.alpha=0;
-  this.spritePike2=Nakama.trapGroup.create(x+700,1120,'Foundation','PikeWhiteShort.png');
+  this.spritePike2=Nakama.trapGroup.create(x+700,1150,'Foundation','PikeWhiteShort.png');
   Nakama.game.physics.arcade.enable(this.spritePike2);
   this.spritePike2.body.allowGravity = false;
   this.spritePike2.body.immovable = true;

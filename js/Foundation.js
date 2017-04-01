@@ -22,3 +22,4 @@ class Foundation{
 Foundation.SPEED=100;
 Foundation.SAFE='White pike is safe';
 Foundation.SIGN="Slow down!It's dangerous! "
+Foundation.STONE="Be carefull!Stone can be fall!"
