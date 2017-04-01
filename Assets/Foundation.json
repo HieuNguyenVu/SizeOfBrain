@@ -136,9 +136,25 @@
 		"spriteSourceSize": {"x":0,"y":0,"w":168.904 ,"h":18.381},
 		"sourceSize": {"w":168.904 ,"h":18.381}
 	},
+	"PikeWhiteShort.png":
+	{
+		"frame": {"x":427.062, "y":441.213 ,"w":125.904 ,"h":18.381 },
+		"rotated": false,
+		"trimmed": false,
+		"spriteSourceSize": {"x":0,"y":0,"w":168.904 ,"h":18.381},
+		"sourceSize": {"w":168.904 ,"h":18.381}
+	},
 	"PikeBlack.png":
 	{
 		"frame": {"x":613.812 , "y":440.569 ,"w":168.904 ,"h":18.381 },
+		"rotated": false,
+		"trimmed": false,
+		"spriteSourceSize": {"x":0,"y":0,"w":168.904 ,"h":18.381},
+		"sourceSize": {"w":168.904 ,"h":18.381}
+	},
+	"PikeBlackShort.png":
+	{
+		"frame": {"x":613.812 , "y":440.569 ,"w":125.904 ,"h":18.381 },
 		"rotated": false,
 		"trimmed": false,
 		"spriteSourceSize": {"x":0,"y":0,"w":168.904 ,"h":18.381},
