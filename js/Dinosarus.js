@@ -74,3 +74,4 @@ class Dinosarus{
 
 Dinosarus.SPEED = 470;
 Dinosarus.JUMP =1700;
+Dinosarus.COUNT=110;

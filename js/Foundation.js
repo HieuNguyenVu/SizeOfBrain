@@ -20,3 +20,5 @@ class Foundation{
 }
 //  Foundation.SPRITE = 'Foundation1.png';
 Foundation.SPEED=100;
+Foundation.SAFE='White pike is safe';
+Foundation.SIGN="Slow down!It's dangerous! "

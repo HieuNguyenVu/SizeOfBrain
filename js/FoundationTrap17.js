@@ -1,4 +1,4 @@
-class FoundationTrap9{
+class FoundationTrap17{
   constructor(x,y){
 
     this.spriteFound = Nakama.foundGroup.create(x,y,'Foundation','Foundation2.png');
@@ -21,7 +21,7 @@ class FoundationTrap9{
     Nakama.game.physics.arcade.enable(this.text1);
     this.text1.body.immovable = true;
     this.text1.body.allowGravity = false;
-    this.spritePike2.body.setSize(-121231,0,0,0);
+    this.spritePike1.body.setSize(-121231,0,0,0);
     }
     update(){
 

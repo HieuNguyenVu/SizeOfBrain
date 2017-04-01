@@ -1,6 +1,7 @@
 class FoundationTrap5{
   constructor(x1,y1){
     this.sprite1 = Nakama.foundGroup.create(x1, 1400,'Foundation','Foundation1.png' );
+
     this.sprite2 = Nakama.foundGroup.create(x1+317, 1200,'Foundation','Foundation1.png' );
     Nakama.game.physics.arcade.enable(this.sprite1);
     Nakama.game.physics.arcade.enable(this.sprite2);
