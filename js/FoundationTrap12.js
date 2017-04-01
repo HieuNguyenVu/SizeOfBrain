@@ -21,7 +21,11 @@ class FoundationTrap12{
     }
     update(){
       var hitTrap= Nakama.game.physics.arcade.overlap(Nakama.playerGroup,Nakama.trapGroup);
-      this.playerSprite=Nakama.playerGroup.getFirstAlive();
+      if(Nakama.playerGroup.getFirstAlive() != null){
+        this.playerSprite=Nakama.playerGroup.getFirstAlive();
+      }else {
+        return;
+      }
 
       if((this.spriteFoundBox.position.x+25-this.playerSprite.position.x)<0){
         this.spriteFoundBox.body.velocity.y=FoundationTrap12.SPEED;

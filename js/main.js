@@ -95,15 +95,6 @@ var create = function(){//Giống Oncreate
     new FoundationTrap11(549+1023*9,1200),
     new FoundationTrap12(549+1023*10,1200),
     new FoundationTrap14(549+1023*11,1200)
-
-
-    //
-
-  //  new FoundationTrapWithPike(1800, 1200)
-    // new Foundation(1800, 1200, 'Foundation2.png'),
-    // new Foundation(2700, 1200, 'Foundation2.png'),
-    // new Foundation(3600, 1200, 'Foundation2.png')
-
   );
 
 }
@@ -116,7 +107,10 @@ var update = function(){//Vòng lặp game
     found.update();
   }
 
-);
+  );
+  if(Nakama.playerGroup.getFirstAlive() == null){
+      console.log("Em nó đã dính bẫy :'(");
+  }
   Nakama.player.forEach(function(dino){
     dino.update();
     }
@@ -132,7 +126,7 @@ var update = function(){//Vòng lặp game
   Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.foundGroup, dkm);
   Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.invifoundGroup, dkm);
   Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.invifoundGroup2, dkm);
-  Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.trapGroup, dkm);
+  Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.trapGroup, gameOver);
   //Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.trap11, dkm);
 
   Nakama.game.physics.arcade.overlap(
@@ -143,7 +137,7 @@ var update = function(){//Vòng lặp game
 }
 
 var gameOver = function(){
-  console.log("Em nó đã dính bẫy :'(");
+  Nakama.playerGroup.getFirstAlive().kill();
 }
 // before camera render (mostly for debug)
 var render = function(){

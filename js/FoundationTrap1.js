@@ -16,7 +16,11 @@
     }
     update(){
 
-      this.playerSprite=Nakama.playerGroup.getFirstAlive();
+      if(Nakama.playerGroup.getFirstAlive() != null){
+        this.playerSprite=Nakama.playerGroup.getFirstAlive();
+      }else {
+        return;
+      }
       if((this.sprite1.position.x-50-this.playerSprite.position.x)<0){
         this.sprite1.body.velocity.y = FoundationTrap1.SPEED;
       //  this.sprite2.body.velocity.y = FoundationTrap1.SPEED;

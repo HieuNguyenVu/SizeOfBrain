@@ -57,8 +57,11 @@ class FoundationTrap4{
   update(){
     this.spriteTrap1.angle = -90;
     this.spriteTrap3.angle = 180;
-    this.playerSprite = Nakama.playerGroup.getFirstAlive();
-
+    if(Nakama.playerGroup.getFirstAlive() != null){
+      this.playerSprite=Nakama.playerGroup.getFirstAlive();
+    }else {
+      return;
+    }
     if ((this.playerSprite.position.y - this.spriteTrap3.position.y < 10 && this.spriteTrap3.position.x - this.playerSprite.position.x < 10) || (kt == 1)){
       this.spriteTrap3.body.velocity.x = 1000;
       this.spriteTrap3.alpha = 1;

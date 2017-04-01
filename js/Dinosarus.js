@@ -10,28 +10,20 @@ class Dinosarus{
       this.sprite.body.collideWorldBounds = false;
       this.sprite.body.bounce.y = 0.8;
       //out bound kill
-      this.sprite.checkWorldBounds = true;
-      // this.sprite.outOfBoundsKill = true;
+      this.sprite.body.checkWarBounds = true;
+      this.sprite.body.outOfBoundsKill = true;
       this.sprite.animations.add('run');
       this.sprite.body.bounce = new Phaser.Point(0,0);
-      }
+    }
   update(){
-      var _this = this;
     var hitFound=  Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.foundGroup);
     //var hitTrap11=  Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.trap11);
     var hitInviFound=  Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.invifoundGroup);
-    console.log(hitFound);
-    // Điều kiện để tăng điểm người chơi
-    if((Nakama.playerGroup.getFirstAlive().position.x > 1034) && Nakama.keyboard.isDown(this.configs.right)) {
-      Nakama.count++;
-      console.log(Nakama.count)
-    };
   //  var hitInviFound2=  Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.invifoundGroup2);
     //Di chuyển lên xuống
     if(Nakama.keyboard.isDown(this.configs.up)&&this.sprite.body.touching.down && (hitFound||hitInviFound)){
     //  console.log("UP button pressed");
       this.sprite.body.velocity.y = -Dinosarus.JUMP;
-      console.log("jump");
 
     }else{
       // this.sprite.body.velocity.y = Dinosarus.SPEED;
@@ -51,9 +43,6 @@ class Dinosarus{
         this.sprite.body.velocity.x = 0;
         Nakama.found.forEach(function(anyFound){
           anyFound.move();
-          // if(anyFound.sprite.position.x < _this.sprite.position.x){
-          //   _this.updateText(_this.count, _this.text);
-          // }
         })
       }else {
         this.sprite.body.velocity.x = Dinosarus.SPEED;
@@ -67,18 +56,15 @@ class Dinosarus{
         anyFound.stop();
       })
     }
+    if(this.sprite.position.y > 1277){
+      this.sprite.kill();
+    }
   }
   move(){
     this.sprite.animations.play('run', 10, true);
   }
   stop(){
     this.sprite.animations.stop('run');
-  }
-  updateText(count, text) {
-    count++;
-    if(count <1024)  text.setText(count + "Mb");
-    if(count >= 1024) text.setText(count/1024 + "Gb");
-    if(count >= 1024000) text.setText((count/1024)/1024 + "Tb");
   }
 }
 
