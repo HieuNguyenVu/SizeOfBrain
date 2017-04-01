@@ -2,7 +2,7 @@
     constructor(x, y){
 
       this.sprite1 = Nakama.foundGroup.create(x, y,'Foundation','Foundation1.png' );
-    
+
       this.sprite2 = Nakama.foundGroup.create(x+316, 1200,'Foundation','Foundation1b.png' );
       // Nakama.game.add(this.sprite);
       Nakama.game.physics.arcade.enable(this.sprite1);
@@ -18,7 +18,7 @@
     }
     update(){
 
-<<<<<<< Updated upstream
+
       if(Nakama.playerGroup.getFirstAlive() != null){
         this.playerSprite=Nakama.playerGroup.getFirstAlive();
       }else {
