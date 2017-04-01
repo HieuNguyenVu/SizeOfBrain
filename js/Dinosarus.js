@@ -11,16 +11,9 @@ class Dinosarus{
       this.sprite.body.bounce.y = 0.8;
       //out bound kill
       this.sprite.checkWorldBounds = true;
-      this.sprite.outOfBoundsKill = true;
+      // this.sprite.outOfBoundsKill = true;
       this.sprite.animations.add('run');
       this.sprite.body.bounce = new Phaser.Point(0,0);
-      this.count=0;
-      this.text = Nakama.game.add.text(Nakama.game.world.centerX, Nakama.game.world.centerY, "0 Mb", {
-        font: "65px Arial",
-        fill: "#ff0044",
-        align: "center"
-        });
-        this.text.anchor.setTo(0.5, 0.5);
       }
   update(){
       var _this = this;
@@ -28,6 +21,11 @@ class Dinosarus{
     //var hitTrap11=  Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.trap11);
     var hitInviFound=  Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.invifoundGroup);
     console.log(hitFound);
+    // Điều kiện để tăng điểm người chơi
+    if((Nakama.playerGroup.getFirstAlive().position.x > 1034) && Nakama.keyboard.isDown(this.configs.right)) {
+      Nakama.count++;
+      console.log(Nakama.count)
+    };
   //  var hitInviFound2=  Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.invifoundGroup2);
     //Di chuyển lên xuống
     if(Nakama.keyboard.isDown(this.configs.up)&&this.sprite.body.touching.down && (hitFound||hitInviFound)){

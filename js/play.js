@@ -8,8 +8,8 @@ var playState = {
     Nakama.playerGroup = Nakama.game.add.physicsGroup();
     Nakama.trapGroup = Nakama.game.add.physicsGroup();
     bot = Nakama.game.add.sprite(0, 1000, 'Dino');
-    var count = 0;
-    var scoreDisplay = this.game.add.text(1800,100, "Score : " +count, {font: '50px Arial', fill: "#00FF00"});
+    Nakama.count = 0;
+    this.scoreDisplay = this.game.add.text(1700,100, "Score : " +Nakama.count, {font: '50px Arial', fill: "#FFFFFF"});
       //  Set the world (global) gravity
     Nakama.player.push(
       new Dinosarus(
@@ -46,7 +46,7 @@ var playState = {
       Nakama.player.length = 0;
       console.log("kill")
     };
-    if()
+    this.scoreDisplay.setText("Score : "+Nakama.count)
     Nakama.found.forEach(function(found){
       found.update();
       }
