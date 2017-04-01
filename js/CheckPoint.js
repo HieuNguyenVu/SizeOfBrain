@@ -9,13 +9,12 @@ class CheckPoint{
     this.spriteChick.body.allowGravity = false;
     this.spriteChick.body.immovable = true;
     this.spriteChick.scale=new Phaser.Point(0.5,0.5);
+    this.spriteChick.body.onCollide = new Phaser.Signal();
+    this.spriteChick.body.onCollide.add(this.hitdis, this);
   }
   update(){
-  var hitdis=Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.disfound);
-  if(hitdis){
-    this.spriteChick.body.setSize(-1,12,0,0);
-    this.spriteChick.alpha=0;
-  }
+  Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.disfound);
+
   }
   move(){
     this.spriteFound1.body.velocity.x = -Dinosarus.SPEED;
@@ -24,5 +23,10 @@ class CheckPoint{
   stop(){
     this.spriteFound1.body.velocity.x = 0;
     this.spriteChick.body.velocity.x = 0;
+  }
+  hitdis(){
+    this.spriteChick.body.setSize(-99991,12,0,0);
+    this.spriteChick.alpha=0;
+    checkPoint();
   }
 }

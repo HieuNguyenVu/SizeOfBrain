@@ -28,7 +28,11 @@ class FoundationTrap15{
 
   }
   update(){
-    this.playerSprite = Nakama.playerGroup.getFirstAlive();
+    if(Nakama.playerGroup.getFirstAlive() != null){
+      this.playerSprite=Nakama.playerGroup.getFirstAlive();
+    }else {
+      return;
+    }
 
     if ((this.sprite1.position.x - this.playerSprite.position.x) < 1){
         if (this.sprite1.position.y >= 1000){

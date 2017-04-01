@@ -27,28 +27,39 @@ var playState = {
         }
       )
     );
-    // createMap()
-    Nakama.found.push(
-      new Foundation(0,1200),
-      new FoundationTrap22(549,1200)
-      // new FoundationTrap5(549,1200),
-      // new FoundationTrap6(549+1023,1200),
-      // new FoundationTrap4(549+1023*7,1200),
-      // new FoundationTrap5(549+1023*2,1200),
-      // new FoundationTrap1(549+1023*13,1200),
-      // new FoundationTrap2(549+1023*12,1200),
-      // new FoundationTrap3(549+1023*3,1200),
-      // new FoundationTrap8(549+1023*4,1200),
-      // new FoundationTrap9(549+1023*5,1200),
-      // new FoundationTrap10(549+1023*6,1200),
-      // new FoundationTrap13(549+1023*8,1200),
-      // new FoundationTrap11(549+1023*9,1200),
-      // new FoundationTrap12(549+1023*10,1200),
-      // new FoundationTrap14(549+1023*11,1200)
-    );
+    var typeFoundation = 0;
+    // Nakama.found.push(new FoundationTrap18(0,1200));
+    if(again == false){
+      tempt = createArray(5);
+      createMap(tempt);
+      // localStorage.setItem("found", Nakama.found);
+    }else{
+      createMap(tempt);
+      // for(let i = 0; i<=5;i++) {
+      //   Nakama.found.push(tempt[i]);
+      // }
+    }
+    // Nakama.found.push(
+    //   new Foundation(0,1200),
+    //   new FoundationTrap5(549,1200),
+    //   new FoundationTrap6(549+1023,1200),
+    //   new FoundationTrap4(549+1023*7,1200),
+    //   new FoundationTrap5(549+1023*2,1200),
+    //   new FoundationTrap1(549+1023*13,1200),
+    //   new FoundationTrap2(549+1023*12,1200),
+    //   new FoundationTrap3(549+1023*3,1200),
+    //   new FoundationTrap8(549+1023*4,1200),
+    //   new FoundationTrap9(549+1023*5,1200),
+    //   new FoundationTrap10(549+1023*6,1200),
+    //   new FoundationTrap13(549+1023*8,1200),
+    //   new FoundationTrap11(549+1023*9,1200),
+    //   new FoundationTrap12(549+1023*10,1200),
+    //   new FoundationTrap14(549+1023*11,1200)
+    // );
   },
   // console.log("play2");
   update : function() {
+
     if(Nakama.playerGroup.getFirstAlive() == null ) {
       this.game.world.removeAll();
       this.game.state.restart();
@@ -69,16 +80,25 @@ var playState = {
       dino.update();
       }
     );
+    Nakama.disfound.forEach(function(check){
+      check.update();
+      }
+    );
     // Nakama.trap.forEach(function(trap){
     //   trap.update();
     //   }
     // );
+
     Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.foundGroup, dkm);
     // Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.trapGroup, dkm);
     Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.invifoundGroup, dkm);
     Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.invifoundGroup2, dkm);
-    Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.trapGroup, gameOver);
-
+    // Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.trapGroup, gameOver);
+    // Nakama.game.physics.arcade.overlap(
+    //   Nakama.playerGroup,
+    //   Nakama.disfound,
+    //   checkPoint
+    // );
     Nakama.game.physics.arcade.overlap(
       Nakama.playerGroup,
       Nakama.trapGroup,

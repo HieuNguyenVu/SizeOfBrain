@@ -24,89 +24,114 @@ function  dkm(){
 }
 
 var gameOver = function(){
-  Nakama.playerGroup.getFirstAlive().kill();
+  if(Nakama.playerGroup.getFirstAlive() != null){
+    Nakama.playerGroup.getFirstAlive().kill();
+  }
 }
-var createMap = function(arr, soluong){
-  var kieu = 0;
-  arr.push(new Foundation(0,1200));
+var again = false;
+var tempt = [];
+var createArray = function(soluong){
+  var arr = [];
+  arr.push(0);
+  for(let i=0; i<soluong; i++){
+    arr.push(Math.floor(Math.random() * 18) + 1);
+  }
+  arr.push(69);
+  return arr;
+}
+var createMap = function(arr){
+  Nakama.found.length = 0;
   var x = 549;
-  for(let i=0; i<soluong ;i++){
-    kieu = Math.floor(Math.random() * 18) + 1;
-    switch (kieu) {
+  for(let i=0; i< arr.length ;i++){
+    switch (arr[i]) {
+      case 0:
+        Nakama.found.push(new Foundation(0,1200));
+        break;
       case 1:
-        arr.push(new FoundationTrap1(x,1200));
+        Nakama.found.push(new FoundationTrap1(x,1200));
         x += 1023;
         break;
       case 2:
-        arr.push(new FoundationTrap2(x,1200));
+        Nakama.found.push(new FoundationTrap2(x,1200));
         x += 1023;
         break;
       case 3:
-        arr.push(new FoundationTrap3(x,1200));
+        Nakama.found.push(new FoundationTrap3(x,1200));
         x += 1023;
         break;
       case 4:
-        arr.push(new FoundationTrap4(x,1200));
+        Nakama.found.push(new FoundationTrap4(x,1200));
         x += 1023;
         break;
       case 5:
-        arr.push(new FoundationTrap5(x,1200));
+        Nakama.found.push(new FoundationTrap5(x,1200));
         x += 1023;
         break;
       case 6:
-        arr.push(new FoundationTrap6(x,1200));
+        Nakama.found.push(new FoundationTrap6(x,1200));
         x += 1023;
         break;
       case 7:
-        arr.push(new FoundationTrap7(x,1200));
+        Nakama.found.push(new FoundationTrap7(x,1200));
         x += 1023;
         break;
       case 8:
-        arr.push(new FoundationTrap8(x,1200));
+        Nakama.found.push(new FoundationTrap8(x,1200));
         x += 1023;
         break;
       case 9:
-        arr.push(new FoundationTrap9(x,1200));
+        Nakama.found.push(new FoundationTrap9(x,1200));
         x += 1023;
         break;
       case 10:
-        arr.push(new FoundationTrap10(x,1200));
+        Nakama.found.push(new FoundationTrap10(x,1200));
         x += 1023;
         break;
       case 11:
-        arr.push(new FoundationTrap11(x,1200));
+        Nakama.found.push(new FoundationTrap11(x,1200));
         x += 1023;
         break;
       case 12:
-        arr.push(new FoundationTrap12(x,1200));
+        Nakama.found.push(new FoundationTrap12(x,1200));
         x += 1023;
         break;
       case 13:
-        arr.push(new FoundationTrap13(x,1200));
+        Nakama.found.push(new FoundationTrap13(x,1200));
         x += 1023;
         break;
       case 14:
-        arr.push(new FoundationTrap14(x,1200));
+        Nakama.found.push(new FoundationTrap14(x,1200));
         x += 1023;
         break;
       case 15:
-        arr.push(new FoundationTrap15(x,1200));
+        Nakama.found.push(new FoundationTrap15(x,1200));
         x += 1023;
         break;
       case 16:
-        arr.push(new FoundationTrap16(x,1200));
+        Nakama.found.push(new FoundationTrap16(x,1200));
         x += 1023;
         break;
       case 17:
-        arr.push(new FoundationTrap17(x,1200));
+        Nakama.found.push(new FoundationTrap17(x,1200));
         x += 1023;
         break;
       case 18:
-        arr.push(new FoundationTrap18(x,1200));
+        Nakama.found.push(new FoundationTrap18(x,1200));
+        x += 1023;
+        break;
+      case 69:
+        Nakama.found.push(new CheckPoint(x,1200));
         x += 1023;
         break;
       default:
 
     }
   }
+}
+var checkPoint = function(){
+  // console.log(tempt);
+  tempt= [];
+  tempt = createArray(5);
+  createMap(tempt);
+  // console.log(tempt);
 }

@@ -12,7 +12,7 @@ var loadState = {
     Nakama.player = [];
     Nakama.trap = [];
     Nakama.found = [];
-
+    
 
   },
   create: function() {

@@ -55,7 +55,7 @@ class FoundationTrap2{
       this.spriteFoundTrap1.body.velocity.y = FoundationTrap1.SPEED;
     }
 
-    if(this.spriteFound2.position.x-this.playerSprite.position.x<10){
+    if(this.spriteFound2.position.x-this.playerSprite.position.x<50){
       this.spriteFound2.body.velocity.y = -FoundationTrap1.SPEED;
     }
     if (this.spriteFound2.position.y<1210){
