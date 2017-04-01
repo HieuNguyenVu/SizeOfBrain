@@ -10,8 +10,8 @@ class Dinosarus{
       this.sprite.body.collideWorldBounds = false;
       this.sprite.body.bounce.y = 0.8;
       //out bound kill
-      this.sprite.body.checkWarBounds = true;
-      this.sprite.body.outOfBoundsKill = true;
+      this.sprite.checkWorldBounds = true;
+      this.sprite.outOfBoundsKill = true;
       this.sprite.animations.add('run');
       this.sprite.body.bounce = new Phaser.Point(0,0);
       this.count=0;
@@ -27,11 +27,13 @@ class Dinosarus{
     var hitFound=  Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.foundGroup);
     //var hitTrap11=  Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.trap11);
     var hitInviFound=  Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.invifoundGroup);
+    console.log(hitFound);
   //  var hitInviFound2=  Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.invifoundGroup2);
     //Di chuyển lên xuống
     if(Nakama.keyboard.isDown(this.configs.up)&&this.sprite.body.touching.down && (hitFound||hitInviFound)){
     //  console.log("UP button pressed");
       this.sprite.body.velocity.y = -Dinosarus.JUMP;
+      console.log("jump");
 
     }else{
       // this.sprite.body.velocity.y = Dinosarus.SPEED;
