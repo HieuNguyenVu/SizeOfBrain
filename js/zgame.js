@@ -33,6 +33,7 @@ var tempt = [];
 var createArray = function(soluong){
   var arr = [];
   arr.push(0);
+  arr.push(0);
   for(let i=0; i<soluong; i++){
     arr.push(Math.floor(Math.random() * 23) + 1);
   }
@@ -40,7 +41,7 @@ var createArray = function(soluong){
   return arr;
 }
 var createMap = function(arr){
-  Nakama.found.length = 0;
+  // Nakama.found.length = 0;
   var x = 549;
   for(let i=0; i< arr.length ;i++){
     switch (arr[i]) {
@@ -154,7 +155,6 @@ var createMap = function(arr){
 }
 var checkPoint = function(){
   // console.log(tempt);
-  tempt= [];
   tempt = createArray(5);
   createMap(tempt);
   // console.log(tempt);
