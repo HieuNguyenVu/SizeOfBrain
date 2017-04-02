@@ -7,7 +7,7 @@ var menuState = {
     var playButton = this.game.add.button(800,800,"playButton",this.playTheGame,this);
 		    playButton.anchor.setTo(0.5,0.5);
         playButton.scale = new Phaser.Point(0.3,0.3);
-    var leaderBoardButton = this.game.add.button(1200,800,"boardButton",this.playTheGame,this);
+    var leaderBoardButton = this.game.add.button(1200,800,"boardButton",this.leaderBoard,this);
     	  leaderBoardButton.anchor.setTo(0.5,0.5);
         leaderBoardButton.scale = new Phaser.Point(0.3,0.3);
     var gameTiles = this.game.add.image(1050,500, "gameTiles");
@@ -35,9 +35,11 @@ var menuState = {
     //   Nakama.player.push(new Dinosarus(bot,{}));
     // }
   },
-
-
   playTheGame: function(){
 		this.game.state.start("play");
-	}
+	},
+  leaderBoard: function () {
+   listPropertyNames = Object.keys(leaderPlayer);
+    this.game.state.start("leaderBoard",true,false, listPropertyNames)
+  }
 }

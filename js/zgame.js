@@ -15,8 +15,15 @@ Nakama.game.state.add('menu', menuState);
 Nakama.game.state.add('play', playState);
 Nakama.game.state.add('gameOver', gameOverState);
 Nakama.game.state.add('leaderBoard', leaderBoardState);
-
 Nakama.game.state.start('boot');
+var score = 0;
+var leaderPlayer = {
+  nam : 100000,
+  dien: 1000,
+  khanh: 2000,
+  hieu: 10000,
+  user5 : 00
+}
 var gameOver = function(){
   console.log("Em nó đã dính bẫy :'(")
 }

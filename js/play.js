@@ -72,6 +72,7 @@ var playState = {
         music.destroy();
       }
       setTimeout(function(){
+        score = Nakama.count;
         Nakama.game.world.removeAll();
         Nakama.game.state.restart();
         Nakama.game.state.start("gameOver");
