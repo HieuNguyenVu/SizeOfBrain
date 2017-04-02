@@ -17,7 +17,7 @@ class FoundationTrap23 {
     this.sprite1.body.immovable = true;
     this.sprite2.body.immovable = true;
     this.sprite3.body.immovable = true;
-    this.text1 = Nakama.game.add.text(x+700, 600, 'The Invisible Boxxx!', { font: "60px Arial Black", fill: "#c51b7d" });
+    this.text1 = Nakama.game.add.text(x+100, 750, 'The Invisible Boxxx!', { font: "60px Arial Black", fill: "#c51b7d" });
   //  this.sprite.body.setSize(135.199,431.242-14,0,14);
 
   }

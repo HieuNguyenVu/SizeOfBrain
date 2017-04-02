@@ -37,7 +37,7 @@ class FoundationTrap20 {
     this.sprite5.body.immovable = true;
     this.sprite6.body.immovable = true;
     this.sprite7.body.immovable = true;
-    this.spritetext1 = Nakama.game.add.text(x+800, 600, "Don't scare!", { font: "60px Arial Black", fill: "#c51b7d" });
+    this.spritetext1 = Nakama.game.add.text(x+100, 750, "Don't scare!", { font: "60px Arial Black", fill: "#c51b7d" });
     Nakama.game.physics.arcade.enable(this.spritetext1);
     this.spritetext1.body.allowGravity = false;
     this.spritetext1.body.immovable = true;
