@@ -20,14 +20,18 @@ var gameOverState = {
     var textTroll= this.game.add.text(720, 150, "DON'T CRY", {font: '120px Arial', fill: "#00000"});
   },
   playTheGameAtNew: function(){
-      Nakama.found.length = 0;
+
     again = false;
-    this.game.state.start("play",true,false,again);
+    setTimeout(function(){
+      Nakama.game.state.start("play",true,false,again);
+    },1000)
 	},
   playTheGameAtCheckPoint: function() {
-    Nakama.found.length = 0;
+    // Nakama.found.length = 0;
     again = true;
-    this.game.state.start("play",true,false,again);
+    setTimeout(function(){
+      Nakama.game.state.start("play",true,false,again);
+    },1000)
   },
   leaderBoard : function() {
     this.game.state.start("leaderBoard");

@@ -74,6 +74,7 @@ var playState = {
         score = Nakama.count;
         Nakama.game.world.removeAll();
         Nakama.game.state.restart();
+        Nakama.found.length = 0;
         Nakama.game.state.start("gameOver",true,false);
         Nakama.player.length = 0;
         console.log("kill")
