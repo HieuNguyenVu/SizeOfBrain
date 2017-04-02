@@ -16,7 +16,7 @@
       Nakama.game.physics.arcade.enable(this.spriteStone);
       this.spriteStone.body.allowGravity = false;
       this.spriteStone.body.immovable = true;
-      this.spritetext1 = Nakama.game.add.text(x+100, 600, Foundation.STONE, { font: "60px Arial Black", fill: "#c51b7d" });
+      this.spritetext1 = Nakama.game.add.text(x+100, 750, Foundation.STONE, { font: "60px Arial Black", fill: "#c51b7d" });
       Nakama.game.physics.arcade.enable(this.spritetext1);
       this.spritetext1.body.allowGravity = false;
       this.spritetext1.body.immovable = true;

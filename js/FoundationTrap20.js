@@ -70,7 +70,7 @@ class FoundationTrap20 {
     this.sprite5.body.velocity.x = -Dinosarus.SPEED;
     this.sprite6.body.velocity.x = -Dinosarus.SPEED;
     this.sprite7.body.velocity.x = -Dinosarus.SPEED;
-    this.this.spritetext1.body.velocity.x = -Dinosarus.SPEED;
+    this.spritetext1.body.velocity.x = -Dinosarus.SPEED;
   }
   stop(){
     this.sprite1.body.velocity.x = 0;

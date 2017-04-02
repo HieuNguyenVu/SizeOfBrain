@@ -32,13 +32,13 @@ class FoundationTrap22{
     return;
   }
   if((this.spriteFound1.position.x+10-this.playerSprite.position.x)<0){
-    this.spriteFound1.body.velocity.y =-3000;
+    this.spriteFound1.body.velocity.y =-2000;
 
 
 
    }
    if((this.spriteFound3.position.x+10-this.playerSprite.position.x)<0){
-     this.spriteFound3.body.velocity.y =-3000;
+     this.spriteFound3.body.velocity.y =-2000;
 
 
 

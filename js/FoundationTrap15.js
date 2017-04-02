@@ -62,7 +62,7 @@ class FoundationTrap15{
     }
     if ((this.sprite3.position.x - this.playerSprite.position.x) < 1){
       this.sprite3.body.velocity.y = 900;
-      kt1 = 1;
+    
     }
   }
   move(){
