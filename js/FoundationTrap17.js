@@ -10,7 +10,7 @@ class FoundationTrap17{
     this.spriteFound2.body.allowGravity = false;
     this.spriteFound2.body.immovable = true;
     this.spritePike1=Nakama.trapGroup.create(x+200,1150,'Foundation','PikeBlackShort.png');
-    this.spritePike2=Nakama.trapGroup.create(x+200,950,'Foundation','PikeWhiteShort.png');
+    this.spritePike2=Nakama.trapGroup.create(x+200,850,'Foundation','PikeWhiteShort.png');
     Nakama.game.physics.arcade.enable(this.spritePike1);
     Nakama.game.physics.arcade.enable(this.spritePike2);
     this.spritePike1.body.allowGravity = false;

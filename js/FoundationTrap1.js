@@ -39,4 +39,4 @@
       this.sprite2.body.velocity.x = 0;
     }
   }
-  FoundationTrap1.SPEED=500;
+  FoundationTrap1.SPEED=900;

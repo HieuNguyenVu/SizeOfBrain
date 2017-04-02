@@ -31,15 +31,15 @@ class FoundationTrap22{
   }else{
     return;
   }
-  if((this.spriteFound1.position.x+10-this.playerSprite.position.x)<0||kt5==1){
+  if((this.spriteFound1.position.x+10-this.playerSprite.position.x)<0){
     this.spriteFound1.body.velocity.y =-3000;
-    kt5=1;
+
 
 
    }
-   if((this.spriteFound3.position.x+10-this.playerSprite.position.x)<0||kt6==1){
+   if((this.spriteFound3.position.x+10-this.playerSprite.position.x)<0){
      this.spriteFound3.body.velocity.y =-3000;
-     kt6=1;
+
 
 
     }
@@ -67,5 +67,3 @@ class FoundationTrap22{
     // this.spritePike2.body.velocity.x = 0;
   }
 }
-let kt5=0;
-let kt6=0

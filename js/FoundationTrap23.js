@@ -28,9 +28,9 @@ class FoundationTrap23 {
     }else {
       return;
     }
-    if (this.sprite2.position.x - this.playerSprite.position.x < 10 || kt7 == 0){
-      this.sprite2.body.velocity.x = 500;
-      kt7 = 0;
+    if (this.sprite2.position.x - this.playerSprite.position.x < 10 ){
+      this.sprite2.body.velocity.x = 900;
+
     }
   }
   move(){
@@ -44,5 +44,3 @@ class FoundationTrap23 {
     this.sprite3.body.velocity.x = 0;
   }
 }
-
-let kt7 = 1;

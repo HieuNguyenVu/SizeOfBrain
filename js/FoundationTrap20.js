@@ -37,7 +37,10 @@ class FoundationTrap20 {
     this.sprite5.body.immovable = true;
     this.sprite6.body.immovable = true;
     this.sprite7.body.immovable = true;
-    this.text1 = Nakama.game.add.text(x+800, 600, "Don't scare!", { font: "60px Arial Black", fill: "#c51b7d" });
+    this.spritetext1 = Nakama.game.add.text(x+800, 600, "Don't scare!", { font: "60px Arial Black", fill: "#c51b7d" });
+    Nakama.game.physics.arcade.enable(this.spritetext1);
+    this.spritetext1.body.allowGravity = false;
+    this.spritetext1.body.immovable = true;
   //  this.sprite.body.setSize(135.199,431.242-14,0,14);
 
   }
@@ -67,6 +70,7 @@ class FoundationTrap20 {
     this.sprite5.body.velocity.x = -Dinosarus.SPEED;
     this.sprite6.body.velocity.x = -Dinosarus.SPEED;
     this.sprite7.body.velocity.x = -Dinosarus.SPEED;
+    this.this.spritetext1.body.velocity.x = -Dinosarus.SPEED;
   }
   stop(){
     this.sprite1.body.velocity.x = 0;
@@ -76,6 +80,7 @@ class FoundationTrap20 {
     this.sprite5.body.velocity.x = 0;
     this.sprite6.body.velocity.x = 0;
     this.sprite7.body.velocity.x = 0;
+    this.spritetext1.body.velocity.x = 0;
   }
 }
 FoundationTrap20.SPEED=2000;
