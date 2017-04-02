@@ -44,10 +44,10 @@ var createArray = function(soluong){
   var arr = [];
   arr.push(0);
   arr.push(0);
-  // for(let i=0; i<soluong; i++){
-  //   arr.push(Math.floor(Math.random() * 24) + 1);
-  // }
-  arr.push(15);
+  for(let i=0; i<soluong; i++){
+    arr.push(Math.floor(Math.random() * 24) + 1);
+  }
+  // arr.push(15);
   arr.push(69);
   return arr;
 }
