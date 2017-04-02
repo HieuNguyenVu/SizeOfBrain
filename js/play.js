@@ -12,6 +12,7 @@ var playState = {
     Nakama.trap11 = Nakama.game.add.physicsGroup();
     Nakama.trapGroup = Nakama.game.add.physicsGroup();
     die = Nakama.game.add.audio('die');
+    checkdie = true;
     // music.onLoop.add(hasLooped, this);
     bot = Nakama.game.add.sprite(0, 1000, 'Dino');
     Nakama.count = 0;
