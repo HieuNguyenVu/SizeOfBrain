@@ -73,6 +73,14 @@
 		"spriteSourceSize": {"x":0,"y":0,"w":323.993,"h":13.284   },
 		"sourceSize": {"w":323.993,"h":13.284  }
 	},
+	"LongTrapVertical.png":
+	{
+		"frame": {"x":1315  , "y":1429 ,"w":16.5 ,"h":330.5  },
+		"rotated": false,
+		"trimmed": false,
+		"spriteSourceSize": {"x":0,"y":0,"w":16.5 ,"h":330.5  },
+		"sourceSize": {"w":16.5 ,"h":330.5  }
+	},
 	"MediumTrap.png":
 	{
 		"frame": {"x":343.319  , "y":582.525 ,"w":129.645 ,"h":13.284 },
@@ -81,6 +89,14 @@
 		"spriteSourceSize": {"x":0,"y":0,"w":129.645 ,"h":13.284 },
 		"sourceSize": {"w":129.645 ,"h":13.284 }
 	},
+	"MediumTrapVertical.png":
+	{
+		"frame": {"x":1315, "y":1289  ,"w":16.5 ,"h":137},
+		"rotated": false,
+		"trimmed": false,
+		"spriteSourceSize": {"x":0,"y":0,"w":16.5 ,"h":137},
+		"sourceSize": {"w":16.5 ,"h":137}
+	},
 	"ShortTrap.png":
 	{
 		"frame": {"x":481.825  , "y":582.525,"w":64.822 ,"h":13.284},
@@ -88,6 +104,14 @@
 		"trimmed": false,
 		"spriteSourceSize": {"x":0,"y":0,"w":64.822 ,"h":13.284},
 		"sourceSize": {"w":64.822 ,"h":13.284}
+	},
+	"ShortTrapVertical.png":
+	{
+		"frame": {"x":1315, "y":1214 ,"w":16.5,"h":75},
+		"rotated": false,
+		"trimmed": false,
+		"spriteSourceSize": {"x":0,"y":0,"w":16.5,"h":75},
+		"sourceSize": {"w":16.5,"h":75}
 	},
 	"PikeWhite.png":
 	{
