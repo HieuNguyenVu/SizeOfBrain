@@ -9,6 +9,11 @@ var loadState = {
     Nakama.game.load.image('gameOver' , 'Assets/gameOver.png');
     Nakama.game.load.image('gameTiles' , 'Assets/gameTiles.png');
     Nakama.game.load.image('boardButton' , 'Assets/leaderBoard.png');
+    Nakama.game.load.audio('gameplay', ['assets/audio/gameplaymusic.mp3', 'assets/audio/gameplaymusic.ogg']);
+    Nakama.game.load.audio('die', ['assets/audio/Chet.wav', 'assets/audio/Chet.ogg']);
+    Nakama.game.load.audio('jump', ['assets/audio/Nhayv2.ogg', 'assets/audio/Nhayv2.ogg']);
+    Nakama.game.load.audio('checkpoint', ['assets/audio/Quaman.wav', 'assets/audio/Quaman.ogg']);
+
     console.log("create");
     Nakama.player = [];
     Nakama.trap = [];

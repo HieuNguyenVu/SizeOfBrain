@@ -149,6 +149,10 @@ var createMap = function(arr){
         Nakama.found.push(new CheckPoint(x,1200));
         x += 1023;
         break;
+      case 70:
+        Nakama.found.push(new FoundationTrapWithPike(x,1200));
+        x += 1023;
+        break;
       default:
 
     }
