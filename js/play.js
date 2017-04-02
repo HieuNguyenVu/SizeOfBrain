@@ -11,14 +11,13 @@ var playState = {
     Nakama.disfound = Nakama.game.add.physicsGroup();
     Nakama.trap11 = Nakama.game.add.physicsGroup();
     Nakama.trapGroup = Nakama.game.add.physicsGroup();
-    checkdie =true;
     die = Nakama.game.add.audio('die');
-    music = Nakama.game.add.audio('gameplay');
     // music.onLoop.add(hasLooped, this);
     bot = Nakama.game.add.sprite(0, 1000, 'Dino');
     Nakama.count = 0;
     this.scoreDisplay = this.game.add.text(1700,100, "Score : " +Nakama.count, {font: '50px Arial', fill: "#FFFFFF"});
-    music.loopFull(0.6);
+    music = Nakama.game.add.audio('gameplay');
+    music.loopFull();
       //  Set the world (global) gravity
     Nakama.player.push(
       new Dinosarus(
@@ -36,10 +35,10 @@ var playState = {
     // Nakama.found.push(new FoundationTrap18(0,1200));
     if(again == false){
       tempt = createArray(5);
-      createMap(tempt, 549);
+      createMap(tempt);
       // localStorage.setItem("found", Nakama.found);
     }else{
-      createMap(tempt, 549);
+      createMap(tempt);
       // for(let i = 0; i<=5;i++) {
       //   Nakama.found.push(tempt[i]);
       // }
@@ -71,13 +70,14 @@ var playState = {
         music.destroy();
       }
       setTimeout(function(){
+        music.stop();
         score = Nakama.count;
         Nakama.game.world.removeAll();
         Nakama.game.state.restart();
         Nakama.found.length = 0;
-        Nakama.game.state.start("gameOver",true,false);
+        Nakama.game.state.start("gameOver",true,false, music);
         Nakama.player.length = 0;
-        console.log("kill")
+        // console.log("kill")
       }, 1000);
 
     };

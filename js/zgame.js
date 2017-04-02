@@ -16,7 +16,11 @@ Nakama.game.state.add('play', playState);
 Nakama.game.state.add('gameOver', gameOverState);
 Nakama.game.state.add('leaderBoard', leaderBoardState);
 Nakama.game.state.start('boot');
+
 var score = 0;
+var again = false ;
+var loaded = false;
+var checkdie =true;
 var leaderPlayer = {
   nam : 100000,
   dien: 1000,
@@ -35,7 +39,6 @@ var gameOver = function(){
     Nakama.playerGroup.getFirstAlive().kill();
   }
 }
-var again = false ;
 var tempt = [];
 var createArray = function(soluong){
   var arr = [];
@@ -47,12 +50,13 @@ var createArray = function(soluong){
   arr.push(69);
   return arr;
 }
-var createMap = function(arr, x){
+var createMap = function(arr){
   Nakama.found = [];
+  var x = 549;
   for(let i=0; i< arr.length ;i++){
     switch (arr[i]) {
       case 0:
-        Nakama.found.push(new Foundation(x-549,1200));
+        Nakama.found.push(new Foundation(0,1200));
         break;
       case 1:
         Nakama.found.push(new FoundationTrap1(x,1200));
@@ -163,9 +167,9 @@ var createMap = function(arr, x){
     }
   }
 }
-var checkPoint = function(x){
+var checkPoint = function(){
   // console.log(tempt);
   tempt = createArray(5);
-  createMap(tempt, x);
+  createMap(tempt);
   // console.log(tempt);
 }

@@ -18,20 +18,26 @@ var gameOverState = {
     var textNewGame= this.game.add.text(1050, 900, "NEW GAME", {font: '45px Arial', fill: "#00000"});
     var textLeaderBoard2= this.game.add.text(900, 1120, "Save Score", {font: '45px Arial', fill: "#00000"});
     var textTroll= this.game.add.text(720, 150, "DON'T CRY", {font: '120px Arial', fill: "#00000"});
+    setTimeout(function() {
+      loaded = true;
+    }, 500);
+
   },
   playTheGameAtNew: function(){
-
-    again = false;
-    setTimeout(function(){
+    if (loaded) {
+      music.destroy();
+      again = false;
       Nakama.game.state.start("play",true,false,again);
-    },1000)
+      loaded = false
+    }
 	},
   playTheGameAtCheckPoint: function() {
-    // Nakama.found.length = 0;
-    again = true;
-    setTimeout(function(){
+    if (loaded) {
+      music.destroy();
+      again = true;
       Nakama.game.state.start("play",true,false,again);
-    },1000)
+      loaded = false
+    }
   },
   leaderBoard : function() {
     this.game.state.start("leaderBoard");
