@@ -41,7 +41,7 @@ class FoundationTrap20 {
     Nakama.game.physics.arcade.enable(this.spritetext1);
     this.spritetext1.body.allowGravity = false;
     this.spritetext1.body.immovable = true;
-  //  this.sprite.body.setSize(135.199,431.242-14,0,14);
+  //  this.sprite.body.setSize(135.199,431.242-14,0,14)
 
   }
   update(){
