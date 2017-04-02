@@ -16,6 +16,7 @@ Nakama.game.state.add('play', playState);
 Nakama.game.state.add('gameOver', gameOverState);
 Nakama.game.state.add('leaderBoard', leaderBoardState);
 Nakama.game.state.start('boot');
+
 var score = 0;
 var leaderPlayer = {
   nam : 100000,
@@ -48,7 +49,7 @@ var createArray = function(soluong){
   return arr;
 }
 var createMap = function(arr){
-  // Nakama.found.length = 0;
+  Nakama.found = [];
   var x = 549;
   for(let i=0; i< arr.length ;i++){
     switch (arr[i]) {
