@@ -56,16 +56,15 @@ class FoundationTrap4{
   }
   update(){
     this.spriteTrap1.angle = -90;
-    this.spriteTrap3.angle = 180;
     if(Nakama.playerGroup.getFirstAlive() != null){
       this.playerSprite=Nakama.playerGroup.getFirstAlive();
     }else {
       return;
     }
-    if ((-this.playerSprite.position.y + this.spriteFound3.position.y < 5 && this.spriteFound3.position.x - this.playerSprite.position.x < 5)){
+    if ((this.playerSprite.position.y - this.spriteFound3.position.y < 5 && this.spriteFound3.position.x - this.playerSprite.position.x < 5)){
       this.spriteTrap3.alpha = 1;
-      this.spriteTrap3.body.velocity.x = -2000;
-      this.spriteTrap4.body.velocity.x = -2000;
+      this.spriteTrap3.body.velocity.x = -5000;
+      this.spriteTrap4.body.velocity.x = -5000;
     }
 
     if(this.spriteFound5.position.x - this.playerSprite.position.x < 50){
