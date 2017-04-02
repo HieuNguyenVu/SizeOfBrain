@@ -27,6 +27,6 @@ class CheckPoint{
   hitdis(){
     this.spriteChick.body.setSize(-99991,12,0,0);
     this.spriteChick.alpha=0;
-    checkPoint();
+    checkPoint(Nakama.playerGroup.getFirstAlive().position.x);
   }
 }
