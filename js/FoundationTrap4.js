@@ -10,10 +10,11 @@ class FoundationTrap4{
     Nakama.game.physics.arcade.enable(this.spriteFoundTrap1);
     this.spriteFoundTrap1.body.allowGravity = false;
     this.spriteFoundTrap1.body.immovable = true;
-    this.spriteTrap1 = Nakama.trapGroup.create(x+500-9, y+10, 'Foundation', 'LongTrap.png');
+    this.spriteTrap1 = Nakama.trapGroup.create(x+500-200, y-10, 'Foundation', 'LongTrap.png');
     Nakama.game.physics.arcade.enable(this.spriteTrap1);
     this.spriteTrap1.body.allowGravity = false;
     this.spriteTrap1.body.immovable = true;
+    this.spriteTrap1.angle = -90;
 
     this.spriteFound2 = Nakama.foundGroup.create(x+640, y-250 , 'Foundation', 'Foundation1.png');
     Nakama.game.physics.arcade.enable(this.spriteFound2);
@@ -55,7 +56,6 @@ class FoundationTrap4{
     this.spriteFound5.body.immovable = true;
   }
   update(){
-    this.spriteTrap1.angle = -90;
     if(Nakama.playerGroup.getFirstAlive() != null){
       this.playerSprite=Nakama.playerGroup.getFirstAlive();
     }else {

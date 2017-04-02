@@ -98,10 +98,10 @@ var playState = {
       check.update();
       }
     );
-    // Nakama.trap.forEach(function(trap){
-    //   trap.update();
-    //   }
-    // );
+    Nakama.trap.forEach(function(trap){
+      trap.update();
+      }
+    );
 
     Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.foundGroup, dkm);
     // Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.trapGroup, dkm);
