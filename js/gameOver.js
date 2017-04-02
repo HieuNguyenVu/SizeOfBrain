@@ -35,7 +35,7 @@ var gameOverState = {
   saveScore : function() {
     var playerName = prompt("Please enter your name", "");
     keysSorted = Object.keys(leaderPlayer).sort(function(a,b){return leaderPlayer[b]-leaderPlayer[a]});
-    if(playerName != "" || playerName== null){
+    if( playerName == null){
       playerName = "unknown";
       leaderPlayer[ playerName ] = score;
     }

@@ -13,6 +13,7 @@ var loadState = {
     Nakama.game.load.audio('die', ['assets/audio/Chet.wav', 'assets/audio/Chet.ogg']);
     Nakama.game.load.audio('jump', ['assets/audio/Nhayv2.ogg', 'assets/audio/Nhayv2.ogg']);
     Nakama.game.load.audio('checkpoint', ['assets/audio/Quaman.wav', 'assets/audio/Quaman.ogg']);
+    Nakama.game.load.image('homeButton' , 'Assets/homeButton.png');
 
     console.log("create");
     Nakama.player = [];

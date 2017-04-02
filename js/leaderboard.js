@@ -8,10 +8,10 @@ var leaderBoardState = {
     this.game.add.image(0,1200, "Foundation", "Foundation2.png");
     this.game.add.image(900,1200, "Foundation", "Foundation2.png");
     this.game.add.image(1800,1200, "Foundation", "Foundation2.png");
-    var playButton = this.game.add.button(1023,950,"playButton",this.playTheGame,this);
+    var playButton = this.game.add.button(1023,950,"homeButton",this.backMenu,this);
 		    playButton.anchor.setTo(0.5,0.5);
         playButton.scale = new Phaser.Point(0.3,0.3);
-    this.game.add.text(890,1050, "PLAY GAME", {font: '45px Arial', fill: "#000000"});
+    this.game.add.text(900,1050, "MAIN MENU", {font: '45px Arial', fill: "#000000"});
     this.game.add.text(250,100, "PEOPLE WANT TO DIE SO HARDDD", {font: '100px Arial', fill: "#000000"});
     this.game.add.text(750,250, "PLAYER" , {font: '50px Arial', fill: "#000000"});
     this.game.add.text(1050,250, "SCORE" , {font: '50px Arial', fill: "#000000"});
@@ -22,7 +22,7 @@ var leaderBoardState = {
       }
     }
   },
-  playTheGame: function() {
-    this.game.state.start("play")
+  backMenu: function() {
+    this.game.state.start("menu")
   }
 }
