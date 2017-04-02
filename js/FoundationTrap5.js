@@ -32,7 +32,7 @@ class FoundationTrap5{
       //this.sprite2.body.velocity.y = -FoundationTrap5.SPEED;
       this.sprite2.body.velocity.y = FoundationTrap5.SPEED;
     }
-    if(this.sprite1.position.y<1215){
+    if(this.sprite1.position.y<1210){
       this.sprite1.body.velocity.y=0;
       this.sprite2.body.velocity.y=0;
     }

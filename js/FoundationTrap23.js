@@ -7,6 +7,7 @@ class FoundationTrap23 {
     this.sprite4 = Nakama.foundGroup.create(x+500, y,'Foundation2','Foundation1.png' );
     this.sprite4.alpha = 0;
     // Nakama.game.add(this.sprite);
+
     Nakama.game.physics.arcade.enable(this.sprite1);
     Nakama.game.physics.arcade.enable(this.sprite2);
     Nakama.game.physics.arcade.enable(this.sprite3);
@@ -21,7 +22,9 @@ class FoundationTrap23 {
     this.sprite4.body.immovable = true;
     this.text1 = Nakama.game.add.text(x+150, 750, 'The Invisible!', { font: "60px Arial Black", fill: "#c51b7d" });
   //  this.sprite.body.setSize(135.199,431.242-14,0,14)
-
+  Nakama.game.physics.arcade.enable(this.text1);
+  this.text1.body.allowGravity = false;
+  this.text1.body.immovable = true;
   }
   update(){
 
@@ -43,8 +46,11 @@ class FoundationTrap23 {
     this.sprite2.body.velocity.x = -Dinosarus.SPEED;
     this.sprite3.body.velocity.x = -Dinosarus.SPEED;
     this.sprite4.body.velocity.x = -Dinosarus.SPEED;
+
+    this.text1.body.velocity.x = -Dinosarus.SPEED;
   }
   stop(){
+    this.text1.body.velocity.x = 0;
     this.sprite1.body.velocity.x = 0;
     this.sprite2.body.velocity.x = 0;
     this.sprite3.body.velocity.x = 0;
