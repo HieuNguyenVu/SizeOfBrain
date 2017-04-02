@@ -43,11 +43,11 @@ var tempt = [];
 var createArray = function(soluong){
   var arr = [];
   arr.push(0);
-  arr.push(0);
+  arr.push(70);
   for(let i=0; i<soluong; i++){
     arr.push(Math.floor(Math.random() * 24) + 1);
   }
-  // arr.push(15);
+  // arr.push(13);
   arr.push(69);
   return arr;
 }
@@ -152,25 +152,28 @@ var createMap = function(arr){
         x += 1023;
         break;
       case 24:
-            Nakama.found.push(new FoundationTrap24(x,1200));
-            x += 1023;
-            break;
+        Nakama.found.push(new FoundationTrap24(x,1200));
+        x += 1023;
+        break;
       case 69:
         Nakama.found.push(new CheckPoint(x,1200));
         x += 1023;
         break;
       case 70:
-        Nakama.found.push(new FoundationTrapWithPike(x,1200));
-        x += 1023;
+        Nakama.found.push(new Foundation(550,1200));
+        x += 700;
         break;
       default:
 
     }
   }
 }
-var checkPoint = function(){
+var checkPoint = function(x){
   // console.log(tempt);
+  Nakama.found.forEach(function(anyFound){
+    anyFound.move();
+  })
   tempt = createArray(5);
-  createMap(tempt);
+  createMap(tempt, x);
   // console.log(tempt);
 }

@@ -14,11 +14,11 @@ var leaderBoardState = {
     this.game.add.text(900,1050, "MAIN MENU", {font: '45px Arial', fill: "#000000"});
     this.game.add.text(250,100, "PEOPLE WANT TO DIE SO HARDDD", {font: '100px Arial', fill: "#000000"});
     this.game.add.text(750,250, "PLAYER" , {font: '50px Arial', fill: "#000000"});
-    this.game.add.text(1050,250, "SCORE" , {font: '50px Arial', fill: "#000000"});
+    this.game.add.text(1150,250, "SCORE" , {font: '50px Arial', fill: "#000000"});
     for (var j = 0; j <10; j ++) {
       if(keysSorted[j] != undefined) {
         this.game.add.text(750,350+(100*j), keysSorted[j] , {font: '50px Arial', fill: "#000000"});
-        this.game.add.text(1050,350+(100*j), leaderPlayer[keysSorted[j]] , {font: '50px Arial', fill: "#000000"});
+        this.game.add.text(1150,350+(100*j), leaderPlayer[keysSorted[j]] , {font: '50px Arial', fill: "#000000"});
       }
     }
   },
