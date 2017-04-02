@@ -38,6 +38,7 @@ class FoundationTrap23 {
     }
     if (this.sprite2.position.x > 1070){
       this.sprite2.alpha = 0;
+      this.sprite2.body.velocity.y=100000;
     }
 
   }
