@@ -19,10 +19,7 @@ class FoundationTrap2{
     Nakama.game.physics.arcade.enable(this.spriteFound3);
     this.spriteFound3.body.allowGravity = false;
     this.spriteFound3.body.immovable = true;
-    this.spriteTrap1 = Nakama.trapGroup.create(x+640, y+3, 'Foundation', 'LongTrap.png');
-    Nakama.game.physics.arcade.enable(this.spriteTrap1);
-    this.spriteTrap1.body.allowGravity = false;
-    this.spriteTrap1.body.immovable = true;
+
 
 
     this.spriteFound4 = Nakama.foundGroup.create(x+780, y, 'Foundation', 'Foundation1.png');
@@ -58,7 +55,7 @@ class FoundationTrap2{
     if(this.spriteFound2.position.x-this.playerSprite.position.x<50){
       this.spriteFound2.body.velocity.y = -FoundationTrap1.SPEED;
     }
-    if (this.spriteFound2.position.y<1210){
+    if (this.spriteFound2.position.y<1221){
       this.spriteFound2.body.velocity.y = 0;
     }
 
@@ -68,7 +65,6 @@ class FoundationTrap2{
     this.spriteFoundTrap1.body.velocity.x = -Dinosarus.SPEED;
     this.spriteFound2.body.velocity.x = -Dinosarus.SPEED;
     this.spriteFound3.body.velocity.x = -Dinosarus.SPEED;
-    this.spriteTrap1.body.velocity.x = -Dinosarus.SPEED;
     this.spriteFound4.body.velocity.x = -Dinosarus.SPEED;
     this.spriteFoundTrap2.body.velocity.x = -Dinosarus.SPEED;
     this.spriteTrap2.body.velocity.x = -Dinosarus.SPEED;
@@ -78,7 +74,6 @@ class FoundationTrap2{
     this.spriteFoundTrap1.body.velocity.x = 0;
     this.spriteFound2.body.velocity.x = 0;
     this.spriteFound3.body.velocity.x = 0;
-    this.spriteTrap1.body.velocity.x = 0  ;
     this.spriteFound3.body.velocity.x = 0;
     this.spriteFound4.body.velocity.x = 0;
     this.spriteFoundTrap2.body.velocity.x = 0;
