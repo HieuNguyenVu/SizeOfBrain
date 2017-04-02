@@ -34,8 +34,14 @@ var gameOverState = {
   },
   saveScore : function() {
     var playerName = prompt("Please enter your name", "");
-    listPropertyNames = Object.keys(leaderPlayer);
-    leaderPlayer[ playerName ] = score;
-    this.game.state.start("leaderBoard",true,false, listPropertyNames);
+    keysSorted = Object.keys(leaderPlayer).sort(function(a,b){return leaderPlayer[b]-leaderPlayer[a]});
+    if(playerName != "" || playerName== null){
+      playerName = "unknown";
+      leaderPlayer[ playerName ] = score;
+    }
+    else {
+      leaderPlayer[ playerName ] = score;
+    }
+    this.game.state.start("leaderBoard",true,false, keysSorted);
   }
 }

@@ -23,7 +23,7 @@ var menuState = {
         this.game.add.image(1600,1200, "Foundation2");
         this.game.add.image(1800,1200, "Foundation2");
         this.game.add.image(2000,1200, "Foundation2");
-    var textPlayGame = this.game.add.text(650, 900, "PLAY (AGAIN)", {font: '45px Arial', fill: "#00000"});
+    var textPlayGame = this.game.add.text(650, 900, "PLAY GAME", {font: '45px Arial', fill: "#00000"});
     var textLeaderBoard= this.game.add.text(1050, 900, "WHO DIE MOST", {font: '45px Arial', fill: "#00000"});
     this.checkLastFall = 0;
 
@@ -39,7 +39,7 @@ var menuState = {
 		this.game.state.start("play");
 	},
   leaderBoard: function () {
-   listPropertyNames = Object.keys(leaderPlayer);
-    this.game.state.start("leaderBoard",true,false, listPropertyNames)
+    keysSorted = Object.keys(leaderPlayer).sort(function(a,b){return leaderPlayer[b]-leaderPlayer[a]});
+    this.game.state.start("leaderBoard",true,false, keysSorted)
   }
 }

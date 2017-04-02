@@ -21,8 +21,7 @@ var leaderPlayer = {
   nam : 100000,
   dien: 1000,
   khanh: 2000,
-  hieu: 10000,
-  user5 : 00
+  hieu: 10000
 }
 var gameOver = function(){
   console.log("Em nó đã dính bẫy :'(")
@@ -36,7 +35,7 @@ var gameOver = function(){
     Nakama.playerGroup.getFirstAlive().kill();
   }
 }
-var again = false;
+var again = false ;
 var tempt = [];
 var createArray = function(soluong){
   var arr = [];
