@@ -25,7 +25,7 @@ class FoundationTrap4{
     this.spriteFound3.body.allowGravity = false;
     this.spriteFound3.body.immovable = true;
 
-    this.spriteTrap3 = Nakama.trapGroup.create(x-200, y-550, 'Foundation', 'PikeBlack.png');
+    this.spriteTrap3 = Nakama.trapGroup.create(x+2048, y-550, 'Foundation', 'PikeBlack.png');
     Nakama.game.physics.arcade.enable(this.spriteTrap3);
     this.spriteTrap3.body.allowGravity = false;
     this.spriteTrap3.body.immovable = true;
@@ -62,11 +62,10 @@ class FoundationTrap4{
     }else {
       return;
     }
-    if ((this.playerSprite.position.y - this.spriteTrap3.position.y < 10 && this.spriteTrap3.position.x - this.playerSprite.position.x < 10) || (kt == 1)){
-      this.spriteTrap3.body.velocity.x = 1000;
+    if ((-this.playerSprite.position.y + this.spriteFound3.position.y < 5 && this.spriteFound3.position.x - this.playerSprite.position.x < 5)){
       this.spriteTrap3.alpha = 1;
-      this.spriteTrap4.body.velocity.x = -1500;
-      kt = 1;
+      this.spriteTrap3.body.velocity.x = -2000;
+      this.spriteTrap4.body.velocity.x = -2000;
     }
 
     if(this.spriteFound5.position.x - this.playerSprite.position.x < 50){
@@ -105,4 +104,3 @@ class FoundationTrap4{
   }
 
 }
-let kt = 0;

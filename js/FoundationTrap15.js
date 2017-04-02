@@ -47,10 +47,10 @@ class FoundationTrap15{
         if (this.sprite2.position.y >= 1000){
           this.sprite2.body.velocity.y = -800;
         }
-        if (this.sprite3.position.y < 300 && kt1 == 0){
+        if (this.sprite3.position.y < 300){
           this.sprite3.body.velocity.y = 900;
         }
-        if (this.sprite3.position.y >= 1000 && kt1 == 0){
+        if (this.sprite3.position.y >= 1000){
           this.sprite3.body.velocity.y = -900;
         }
         if (this.sprite4.position.y < 300){
@@ -66,12 +66,14 @@ class FoundationTrap15{
     }
   }
   move(){
+    this.sprite0.body.velocity.x = -Dinosarus.SPEED;
     this.sprite1.body.velocity.x = -Dinosarus.SPEED;
     this.sprite2.body.velocity.x = -Dinosarus.SPEED;
     this.sprite3.body.velocity.x = -Dinosarus.SPEED;
     this.sprite4.body.velocity.x = -Dinosarus.SPEED;
   }
   stop(){
+    this.sprite0.body.velocity.x = 0;
     this.sprite1.body.velocity.x = 0;
     this.sprite2.body.velocity.x = 0;
     this.sprite3.body.velocity.x = 0;
@@ -79,4 +81,3 @@ class FoundationTrap15{
   }
 }
 FoundationTrap15.SPEED=500;
-let kt1 = 0;
