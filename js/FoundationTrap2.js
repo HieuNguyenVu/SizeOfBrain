@@ -10,7 +10,7 @@ class FoundationTrap2{
     this.spriteFoundTrap1.body.allowGravity = false;
     this.spriteFoundTrap1.body.immovable = true;
 
-    this.spriteFound2 = Nakama.foundGroup.create(x+500, y+200, 'Foundation', 'Foundation1.png');
+    this.spriteFound2 = Nakama.foundGroup.create(x+500, y+195, 'Foundation', 'Foundation1.png');
     Nakama.game.physics.arcade.enable(this.spriteFound2);
     this.spriteFound2.body.allowGravity = false;
     this.spriteFound2.body.immovable = true;
@@ -19,7 +19,12 @@ class FoundationTrap2{
     Nakama.game.physics.arcade.enable(this.spriteFound3);
     this.spriteFound3.body.allowGravity = false;
     this.spriteFound3.body.immovable = true;
-
+    this.spriteFound3.body.setSize(166.027,336.013-20,0,+20);
+    this.spriteTrap1 = Nakama.trapGroup.create(x+655, y+5, 'Foundation', 'MediumTrap.png');
+    Nakama.game.physics.arcade.enable(this.spriteTrap1);
+    this.spriteTrap1.body.allowGravity = false;
+    this.spriteTrap1.body.immovable = true;
+    this.spriteTrap1.body.setSize(129.645, 13.284+10, 0, -10);
 
 
     this.spriteFound4 = Nakama.foundGroup.create(x+780, y, 'Foundation', 'Foundation1.png');
@@ -31,7 +36,7 @@ class FoundationTrap2{
     Nakama.game.physics.arcade.enable(this.spriteFoundTrap2);
     this.spriteFoundTrap2.body.allowGravity = false;
     this.spriteFoundTrap2.body.immovable = true;
-    this.spriteTrap2 = Nakama.trapGroup.create(x+780-9, y, 'Foundation', 'LongTrap.png');
+    this.spriteTrap2 = Nakama.trapGroup.create(x+770, y-250, 'Foundation2', 'LongTrapVertical.png');
     Nakama.game.physics.arcade.enable(this.spriteTrap2);
     this.spriteTrap2.body.allowGravity = false;
     this.spriteTrap2.body.immovable = true;
@@ -41,7 +46,6 @@ class FoundationTrap2{
 
   }
   update(){
-    this.spriteTrap2.angle = -90;
     if(Nakama.playerGroup.getFirstAlive() != null){
       this.playerSprite=Nakama.playerGroup.getFirstAlive();
     }else {
@@ -68,6 +72,7 @@ class FoundationTrap2{
     this.spriteFound4.body.velocity.x = -Dinosarus.SPEED;
     this.spriteFoundTrap2.body.velocity.x = -Dinosarus.SPEED;
     this.spriteTrap2.body.velocity.x = -Dinosarus.SPEED;
+    this.spriteTrap1.body.velocity.x = -Dinosarus.SPEED;
   }
   stop(){
     this.spriteFound1.body.velocity.x = 0;
@@ -78,5 +83,6 @@ class FoundationTrap2{
     this.spriteFound4.body.velocity.x = 0;
     this.spriteFoundTrap2.body.velocity.x = 0;
     this.spriteTrap2.body.velocity.x = 0;
+    this.spriteTrap1.body.velocity.x = 0;
   }
 }
