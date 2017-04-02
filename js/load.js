@@ -4,7 +4,8 @@ var loadState = {
     Nakama.game.load.atlasJSONHash('Foundation','Assets/assets.png', 'Assets/Foundation.json');
     Nakama.game.load.atlasJSONHash('Foundation2','Assets/assets2.png', 'Assets/Foundation2.json');
     Nakama.game.load.image('background', 'Assets/background.png');
-    Nakama.game.load.image('button' , 'Assets/playButton.png');
+    Nakama.game.load.image('playButton' , 'Assets/playButton.png');
+    Nakama.game.load.image('replayButton' , 'Assets/replayButton.png');
     Nakama.game.load.image('gameOver' , 'Assets/gameOver.png');
     Nakama.game.load.image('gameTiles' , 'Assets/gameTiles.png');
     Nakama.game.load.image('boardButton' , 'Assets/leaderBoard.png');

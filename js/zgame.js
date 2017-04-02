@@ -14,6 +14,7 @@ Nakama.game.state.add('load', loadState);
 Nakama.game.state.add('menu', menuState);
 Nakama.game.state.add('play', playState);
 Nakama.game.state.add('gameOver', gameOverState);
+Nakama.game.state.add('leaderBoard', leaderBoardState);
 
 Nakama.game.state.start('boot');
 var gameOver = function(){

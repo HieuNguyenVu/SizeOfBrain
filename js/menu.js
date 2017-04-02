@@ -4,7 +4,7 @@ var menuState = {
     Nakama.playerGroup = Nakama.game.add.physicsGroup();
     Nakama.trapGroup = Nakama.game.add.physicsGroup();
     map = Nakama.game.add.sprite(0,0,'background');
-    var playButton = this.game.add.button(800,800,"button",this.playTheGame,this);
+    var playButton = this.game.add.button(800,800,"playButton",this.playTheGame,this);
 		    playButton.anchor.setTo(0.5,0.5);
         playButton.scale = new Phaser.Point(0.3,0.3);
     var leaderBoardButton = this.game.add.button(1200,800,"boardButton",this.playTheGame,this);
