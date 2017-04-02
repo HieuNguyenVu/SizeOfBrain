@@ -2,7 +2,6 @@
 var gameOverState = {
   create : function() {
 
-    console.log("asdasfc");
     map = Nakama.game.add.sprite(0,0,'background');
     var playButtonCheckPoint = this.game.add.button(900,800,"button",this.playTheGameAtCheckPoint,this);
 		    playButtonCheckPoint.anchor.setTo(0.5,0.5);

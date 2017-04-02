@@ -61,11 +61,14 @@ var playState = {
   update : function() {
 
     if(Nakama.playerGroup.getFirstAlive() == null ) {
-      this.game.world.removeAll();
-      this.game.state.restart();
-      this.game.state.start("gameOver");
-      Nakama.player.length = 0;
-      console.log("kill")
+      setTimeout(function(){
+        Nakama.game.world.removeAll();
+        Nakama.game.state.restart();
+        Nakama.game.state.start("gameOver");
+        Nakama.player.length = 0;
+        console.log("kill")
+      }, 1000);
+
     };
     this.scoreDisplay.setText("Score : "+Nakama.count)
     Nakama.found.forEach(function(found){

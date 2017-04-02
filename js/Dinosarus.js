@@ -17,6 +17,9 @@ class Dinosarus{
       this.sprite.body.setSize(130-10,63-5,10,5);
     }
   update(){
+    if(Nakama.playerGroup.getFirstAlive() == null){
+      return;
+    }
     var hitFound=  Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.foundGroup);
     //var hitTrap11=  Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.trap11);
     var hitInviFound=  Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.invifoundGroup);
