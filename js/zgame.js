@@ -18,20 +18,19 @@ Nakama.game.state.add('leaderBoard', leaderBoardState);
 Nakama.game.state.start('boot');
 
 var score = 0;
+var totalscore = 0;
 var again = false ;
 var loaded = false;
 var checkdie =true;
 var leaderPlayer = {
-  nam : 100000,
-  dien: 1000,
-  khanh: 2000,
-  hieu: 10000
+  Nam : 99999,
+  Dien: 99999,
+  Khanh:99999,
+  Hieu: 99999
 }
-var gameOver = function(){
-  console.log("Em nó đã dính bẫy :'(")
-}
+
 function  dkm(){
-  //this.cooldown = true;
+
 }
 
 var gameOver = function(){

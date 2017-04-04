@@ -12,17 +12,10 @@ var menuState = {
         leaderBoardButton.scale = new Phaser.Point(0.3,0.3);
     var gameTiles = this.game.add.image(1050,500, "gameTiles");
         gameTiles.anchor.setTo(0.5,0.5);
-        this.game.add.image(200,1200, "Foundation2");
-        this.game.add.image(400,1200, "Foundation2");
-        this.game.add.image(600,1200, "Foundation2");
-        this.game.add.image(800,1200, "Foundation2");
-        this.game.add.image(0,1200, "Foundation2");
-        this.game.add.image(1000,1200, "Foundation2");
-        this.game.add.image(1200,1200, "Foundation2");
-        this.game.add.image(1400,1200, "Foundation2");
-        this.game.add.image(1600,1200, "Foundation2");
-        this.game.add.image(1800,1200, "Foundation2");
-        this.game.add.image(2000,1200, "Foundation2");
+        this.game.add.image(0,1200, "Foundation", "Foundation2.png");
+        this.game.add.image(970,1200, "Foundation", "Foundation2.png");
+        this.game.add.image(1800,1200, "Foundation", "Foundation2.png");
+
     var textPlayGame = this.game.add.text(650, 900, "PLAY GAME", {font: '45px Arial', fill: "#00000"});
     var textLeaderBoard= this.game.add.text(1050, 900, "WHO DIE MOST", {font: '45px Arial', fill: "#00000"});
     this.checkLastFall = 0;

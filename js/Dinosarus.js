@@ -22,8 +22,9 @@ class Dinosarus{
     }
     var hitFound=  Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.foundGroup);
     var hitInviFound=  Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.invifoundGroup);
+    // Caculate score
     if((Nakama.playerGroup.getFirstAlive().position.x > 1034) && Nakama.keyboard.isDown(this.configs.right)) {
-      Nakama.count++;
+      score++;
       // console.log(Nakama.count)
     };
   //  var hitInviFound2=  Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.invifoundGroup2);

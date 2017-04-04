@@ -1,7 +1,7 @@
-
 var playState = {
   create : function() {
     console.log("play1");
+    // Background and ObjectGroup
     Nakama.keyboard = Nakama.game.input.keyboard;
     map = Nakama.game.add.sprite(0,0,'background');
     Nakama.foundGroup = Nakama.game.add.physicsGroup();
@@ -11,15 +11,15 @@ var playState = {
     Nakama.disfound = Nakama.game.add.physicsGroup();
     Nakama.trap11 = Nakama.game.add.physicsGroup();
     Nakama.trapGroup = Nakama.game.add.physicsGroup();
-    die = Nakama.game.add.audio('die');
+    // Sound
     checkdie = true;
-    // music.onLoop.add(hasLooped, this);
+    die = Nakama.game.add.audio('die');
     bot = Nakama.game.add.sprite(0, 1000, 'Dino');
-    Nakama.count = 0;
-    this.scoreDisplay = this.game.add.text(1700,100, "Score : " +Nakama.count, {font: '50px Arial', fill: "#FFFFFF"});
     music = Nakama.game.add.audio('gameplay');
+    // Save Score
+    this.scoreDisplay = this.game.add.text(1700,100, "Score : " +(totalscore+score), {font: '50px Arial', fill: "#000000"});
     music.loopFull();
-      //  Set the world (global) gravity
+    // Add Dino
     Nakama.player.push(
       new Dinosarus(
         bot,
@@ -32,18 +32,16 @@ var playState = {
         }
       )
     );
+    // create map
     var typeFoundation = 0;
-    // Nakama.found.push(new FoundationTrap18(0,1200));
     if(again == false){
       tempt = createArray(5);
       createMap(tempt);
-      // localStorage.setItem("found", Nakama.found);
-    }else{
-      createMap(tempt);
-      // for(let i = 0; i<=5;i++) {
-      //   Nakama.found.push(tempt[i]);
-      // }
     }
+    else{
+      createMap(tempt);
+    }
+    // Manually create map
     // Nakama.found.push(
     //   new Foundation(0,1200),
     //   new FoundationTrap5(549,1200),
@@ -64,6 +62,7 @@ var playState = {
   },
   // console.log("play2");
   update : function() {
+    // Dino die event
     if(Nakama.playerGroup.getFirstAlive() == null ) {
       if(checkdie == true){
         die.play();
@@ -72,17 +71,17 @@ var playState = {
       }
       setTimeout(function(){
         music.stop();
-        score = Nakama.count;
         Nakama.game.world.removeAll();
         Nakama.game.state.restart();
         Nakama.found.length = 0;
-        Nakama.game.state.start("gameOver",true,false, music);
+        Nakama.game.state.start("gameOver",true,false, {score, music});
         Nakama.player.length = 0;
         // console.log("kill")
       }, 1000);
-
     };
-    this.scoreDisplay.setText("Score : "+Nakama.count)
+    // Display score
+    this.scoreDisplay.setText("Score : " +(totalscore+score));
+    // Update
     Nakama.found.forEach(function(found){
       found.update();
       }
@@ -103,17 +102,10 @@ var playState = {
       trap.update();
       }
     );
-
+    // Collision
     Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.foundGroup, dkm);
-    // Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.trapGroup, dkm);
     Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.invifoundGroup, dkm);
     Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.invifoundGroup2, dkm);
-    // Nakama.game.physics.arcade.collide(Nakama.playerGroup,Nakama.trapGroup, gameOver);
-    // Nakama.game.physics.arcade.overlap(
-    //   Nakama.playerGroup,
-    //   Nakama.disfound,
-    //   checkPoint
-    // );
     Nakama.game.physics.arcade.overlap(
       Nakama.playerGroup,
       Nakama.trapGroup,
