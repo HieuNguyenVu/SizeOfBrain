@@ -55,14 +55,18 @@ var gameOverState = {
   },
   saveScore : function() {
     totalscore += score;
+    score = 0;
     var playerName = prompt("Please enter your name", "");
     keysSorted = Object.keys(leaderPlayer).sort(function(a,b){return leaderPlayer[b]-leaderPlayer[a]});
     if( playerName == null){
       playerName = "unknown";
       leaderPlayer[ playerName ] = totalscore;
+      totalscore = 0;
     }
     else {
       leaderPlayer[ playerName ] = totalscore;
+      totalscore = 0;
+
     }
     this.game.state.start("leaderBoard",true,false, keysSorted);
   }
